@@ -66,14 +66,22 @@
                             </a>
                             <h3 class="text-center">Sign In</h3>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" placeholder="username" id="username" value="renjun" required>
+                        <!-- <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="username" id="username" value="renjun" required>
                             <label for="floatingInput">Username</label>
+                        </div> -->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control"placeholder="username" id="username" value="renjun" required>
+                            <label for="username">Username</label>
                         </div>
-                        <div class="form-floating mb-4">
-                            <input type="password" class="form-control" placeholder="password" id="password" value="yellow" required>
+                        <!-- <div class="form-floating mb-4">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="password" id="password" value="yellow" required>
                             <label for="floatingPassword">Password</label>
-                        </div>
+                        </div> -->
+                        <div class="form-floating mb-4">
+                            <input type="password" class="form-control" id="password" placeholder="password" value="yellow" required>
+                            <label for="password">Password</label>
+                        </div>                        
                         <button type="submit" class="btn btn-primary py-3 w-100 mb-4" id="button"
                         onclick="PostSignUp()">Sign In</button>
                         <p class="text-center mb-0">Belum punya akun? <a href="signup.html">Sign Up</a></p>
