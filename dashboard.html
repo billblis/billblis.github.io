@@ -29,7 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/cookie.js"></script>
+    <!-- <script src="js/cookie.js"></script> -->
 </head>
 
 <style>
@@ -117,13 +117,25 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
-                            <button
-              type="submit"
-              onclick="logout()"
-              class="flex items-center gap-x-2 font-medium text-gray-500 sm:border-l sm:border-gray-300 sm:my-6 sm:pl-6"
-            >
-              Logout
-            </button>
+                            <button id="button"
+                            onclick="confirmLogout()"
+                            class="flex items-center gap-x-2 font-medium text-gray-500 sm:border-l sm:border-gray-300 sm:my-6 sm:pl-6">
+                            Logout
+                        </button>
+                        
+                        <script>
+                        function confirmLogout() {
+                            var confirmation = confirm("Anda yakin ingin logout?"); // Menampilkan dialog konfirmasi
+                        
+                            if (confirmation) {
+                                // Jika pengguna menekan "OK" dalam dialog konfirmasi, arahkan ke halaman login
+                                window.location.href = "login.html"; // Ganti dengan path yang sesuai
+                            } else {
+                                // Jika pengguna menekan "Batal" dalam dialog konfirmasi, tidak ada yang dilakukan
+                            }
+                        }
+                        </script>
+                        
                         </div>
                     </div>
                 </div>
@@ -427,7 +439,7 @@
         // Nama cookie yang akan diperiksa
     
     
-        import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+        // import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
         const cookieName = "token";
     
         // Periksa apakah cookie ada dengan menggunakan fungsi dari file cookieUtil.js
