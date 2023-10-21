@@ -93,12 +93,15 @@
     </div>
 
     <script type="module" src="./js/post.js"></script>
-    <script>
+    <script type="module">
       // Nama cookie yang akan diperiksa
+  
+  
+      import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
       const cookieName = "token";
   
       // Periksa apakah cookie ada dengan menggunakan fungsi dari file cookieUtil.js
-      if (isCookieExist(cookieName)) {
+      if (getCookie(cookieName)) {
         // Jika cookie tidak ada, arahkan kembali ke halaman login
         window.location.href = "dashboard.html";
       }
