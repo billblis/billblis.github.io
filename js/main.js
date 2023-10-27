@@ -97,7 +97,7 @@
             datasets: [{
                     label: "Salse",
                     data: [15, 30, 55, 45, 70, 65, 85],
-                    backgroundColor: "rgba(0, 156, 255, .5)",
+                    backgroundColor: "rgb(216, 191, 216)",
                     fill: true
                 },
                 {

@@ -1,6 +1,7 @@
+
 /********** Template CSS **********/
 :root {
-    --primary: #009CFF;
+    --primary: #A52A2A;
     --light: #F3F6F9;
     --dark: #191C24;
 }
@@ -66,6 +67,7 @@
 
 
 /*** Layout ***/
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -124,7 +126,7 @@
 /*** Navbar ***/
 .sidebar .navbar .navbar-nav .nav-link {
     padding: 7px 20px;
-    color: var(--dark);
+    color: var(--primary);
     font-weight: 500;
     border-left: 3px solid var(--light);
     border-radius: 0 30px 30px 0;
@@ -134,7 +136,7 @@
 .sidebar .navbar .navbar-nav .nav-link:hover,
 .sidebar .navbar .navbar-nav .nav-link.active {
     color: var(--primary);
-    background: #FFFFFF;
+    background:  #ffddd1;
     border-color: var(--primary);
 }
 
