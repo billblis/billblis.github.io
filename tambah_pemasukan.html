@@ -163,9 +163,9 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputIncome" class="form-label">Jumlah Pemasukan</label>
-                                    <input type="number" class="form-control" id="exampleInputIncome" name="jumlah_pemasukan" min="0" step="1000">
+                                    <input type="text" class="form-control" id="exampleInputIncome" name="jumlah_pemasukan">
                                     <!-- <div id="incomeHelp" class="form-text">Pesan bantuan Anda di sini.</div> -->
-                                </div>                                
+                                </div>                     
                                 <div class="mb-3">
                                     <label for="pilihsumber" class="form-label">Sumber Pemasukan</label>
                                     <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -182,7 +182,7 @@
                                 </div>
                                 
                                 <button type="submit" class="btn btn-primary">Tambah</button>
-                                <button type="submit" class="btn btn-primary">Cancel</button>
+                                <button type="submit" class="btn btn-danger">Cancel</button>
                             </form>
                         </div>
                     </div>
@@ -456,11 +456,7 @@
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                            &copy; <a href="#">Billblis</a>, All Right Reserved. 
                         </div>
                     </div>
                 </div>
@@ -474,6 +470,44 @@
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
+    <script>
+        // Fungsi untuk menambahkan tanda titik sebagai pemisah ribuan dan jutaan
+        function formatNumber(input) {
+            // Menghapus tanda titik pemisah angka yang mungkin sudah ada
+            let value = input.value.replace(/\./g, '');
+    
+            // Menghapus semua karakter selain digit
+            value = value.replace(/\D/g, '');
+    
+            // Menambahkan tanda titik pemisah angka untuk ribuan dan jutaan
+            if (value.length > 3) {
+                value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+            }
+    
+            // Menetapkan nilai yang telah diformat kembali ke input
+            input.value = value;
+        }
+    
+        // Ambil elemen input
+        var inputIncome = document.getElementById("exampleInputIncome");
+    
+        // Tambahkan event listener agar pemisah angka diterapkan saat pengguna memasukkan angka
+        inputIncome.addEventListener("input", function() {
+            formatNumber(inputIncome);
+        });
+    </script>
+  <!-- <script>
+    function formatNumber(input) {
+        // Menghapus tanda titik pemisah angka yang mungkin sudah ada
+        let value = input.value.replace(/\./g, '');
+
+        // Membuat tanda titik pemisah angka setiap 3 digit
+        value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+        // Menetapkan nilai yang telah diformat kembali ke input
+        input.value = value;
+    }
+</script> -->
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
