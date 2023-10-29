@@ -277,3 +277,20 @@
     background: var(--dark);
     border-color: var(--primary);
 }
+
+/* Add this CSS to create the download button with hover animation */
+.download-button {
+    background-color: #007bff; /* Warna latar belakang tombol */
+    color: #fff; /* Warna teks tombol */
+    padding: 5px 10px; /* Padding tombol */
+    border: none;
+    border-radius: 5px; /* Sudut tombol bulat */
+    text-decoration: none; /* Menghilangkan dekorasi tautan */
+    transition: background-color 0.3s; /* Animasi perubahan warna latar belakang saat hover */
+
+    /* Stil tautan saat hover */
+    &:hover {
+        background-color: #0056b3; /* Warna latar belakang saat hover */
+    }
+}
+
