@@ -88,13 +88,12 @@
                 <div class="navbar-nav w-100">
                     <a href="dashboard.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Pemasukan</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Pemasukan</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="tab_pemasukan.html" class="dropdown-item nav-link active">Table Pemasukan</a>
+                            <a href="tab_pemasukan.html" class="dropdown-item">Table Pemasukan</a>
                             <a href="tambah_pemasukan.html" class="dropdown-item">Tambah Data</a>
                         </div>
                     </div>
-                    <a href="laporan.html" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>Laporan</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Pengeluaran</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -102,6 +101,7 @@
                             <a href="tambah_pengeluaran.html" class="dropdown-item">Tambah Data</a>
                         </div>
                     </div>
+                    <a href="laporan.html" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>Laporan</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -156,63 +156,85 @@
             </nav>
             <!-- Navbar End -->
 
-        <!-- Table Start -->
-        <div class="container-fluid pt-4 px-4">
-            <div class="row g-4">
-                        
-                <div class="col-12">
-                    <div class="bg-light rounded h-100 p-4">
-                        <h6 class="mb-4">Table Pemasukan</h6>
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Tanggal Masuk</th>
-                                        <th scope="col">Jumlah Masuk</th>
-                                        <th scope="col">Sumber</th>
-                                        <th scope="col">Deskripsi</th>
-                                        <th scope="col">User</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>27/10/2023</td>
-                                        <td>Rp. 5.000.000</td>
-                                        <td>Gaji</td>
-                                        <td>Pemasukan bulan ini</td>
-                                        <td>Renjun</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+
+            <!-- Table Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Laporan Keuangan</h6>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Tipe</th>
+                                            <th scope="col">Last Name</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Country</th>
+                                            <th scope="col">ZIP</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>jhon@email.com</td>
+                                            <td>USA</td>
+                                            <td>123</td>
+                                            <td>Member</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>mark@email.com</td>
+                                            <td>UK</td>
+                                            <td>456</td>
+                                            <td>Member</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>jacob@email.com</td>
+                                            <td>AU</td>
+                                            <td>789</td>
+                                            <td>Member</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Table End -->
+            <!-- Table End -->
 
 
-        <!-- Footer Start -->
-        <div class="container-fluid pt-4 px-4">
-            <div class="bg-light rounded-top p-4">
-                <div class="row">
-                    <div class="col-12 col-sm-6 text-center text-sm-start">
-                        &copy; <a href="#">Billblis</a>, All Right Reserved. 
+            <!-- Footer Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
+                        </div>
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- Footer End -->
         </div>
-        <!-- Footer End -->
-    </div>
-    <!-- Content End -->
+        <!-- Content End -->
 
 
         <!-- Back to Top -->
-         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
