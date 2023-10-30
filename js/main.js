@@ -88,24 +88,24 @@
     });
 
 
-    // Salse & Revenue Chart
+    // Diagram Pengeluaran
     var ctx2 = $("#salse-revenue").get(0).getContext("2d");
     var myChart2 = new Chart(ctx2, {
         type: "line",
         data: {
-            labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
+            labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "November", "Desember"],
             datasets: [{
-                    label: "Salse",
+                    label: "Rp.1",
                     data: [15, 30, 55, 45, 70, 65, 85],
                     backgroundColor: "rgb(216, 191, 216)",
                     fill: true
-                },
-                {
-                    label: "Revenue",
-                    data: [99, 135, 170, 130, 190, 180, 270],
-                    backgroundColor: "rgba(0, 156, 255, .3)",
-                    fill: true
                 }
+                // {
+                //     label: "Revenue",
+                //     data: [99, 135, 170, 130, 190, 180, 270],
+                //     backgroundColor: "rgba(0, 156, 255, .3)",
+                //     fill: true
+                // }
             ]
             },
         options: {
@@ -116,24 +116,6 @@
 
 
     // Diagram Pemasukan
-    var ctx3 = $("#line-chart").get(0).getContext("2d");
-    var myChart3 = new Chart(ctx3, {
-        type: "line",
-        data: {
-            labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "November", "Desember"],
-            datasets: [{
-                label: "Rp.1",
-                fill: false,
-                backgroundColor: "rgba(0, 156, 255, .3)",
-                data: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100]
-            }]
-        },
-        options: {
-            responsive: true
-        }
-    });
-
-    // Diagram Pengeluaran
     var ctx3 = $("#line-chart").get(0).getContext("2d");
     var myChart3 = new Chart(ctx3, {
         type: "line",
