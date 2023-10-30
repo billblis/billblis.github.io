@@ -96,7 +96,7 @@
             labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "November", "Desember"],
             datasets: [{
                     label: "Rp.1",
-                    data: [15, 30, 55, 45, 70, 65, 85],
+                    data: [15, 30, 55, 45, 70, 65, 85, 90, 95, 100, 150, 200],
                     backgroundColor: "rgb(216, 191, 216)",
                     fill: true
                 }
