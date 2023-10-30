@@ -115,7 +115,25 @@
     
 
 
-    // Single Line Chart
+    // Diagram Pemasukan
+    var ctx3 = $("#line-chart").get(0).getContext("2d");
+    var myChart3 = new Chart(ctx3, {
+        type: "line",
+        data: {
+            labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "November", "Desember"],
+            datasets: [{
+                label: "Rp.1",
+                fill: false,
+                backgroundColor: "rgba(0, 156, 255, .3)",
+                data: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100]
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+    // Diagram Pengeluaran
     var ctx3 = $("#line-chart").get(0).getContext("2d");
     var myChart3 = new Chart(ctx3, {
         type: "line",
