@@ -64,7 +64,7 @@
     var myChart1 = new Chart(ctx1, {
         type: "bar",
         data: {
-            labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "November", "Desember"],
+            labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
             datasets: [{
                     label: "Rp.1",
                     data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
@@ -93,7 +93,7 @@
     var myChart2 = new Chart(ctx2, {
         type: "line",
         data: {
-            labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "November", "Desember"],
+            labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
             datasets: [{
                     label: "Rp.1",
                     data: [15, 30, 55, 45, 70, 65, 85, 90, 95, 100, 150, 200],
@@ -120,7 +120,7 @@
     var myChart3 = new Chart(ctx3, {
         type: "line",
         data: {
-            labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "November", "Desember"],
+            labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
             datasets: [{
                 label: "Rp.1",
                 fill: false,
