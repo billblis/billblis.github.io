@@ -21,7 +21,7 @@ function responseData(result) {
     if (result.message == "Selamat Datang") {
         setCookieWithExpireHour("token", result.token, 2);
         alert("Berhasil Masuk " + result.message)
-        window.location.href = "dashboard.html";
+        window.location.href = "../dashboard.html";
     } else {
         alert("Gagal Masuk " + "password atau username salah")
         console.log(result.message);
