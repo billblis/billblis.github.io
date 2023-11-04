@@ -72,7 +72,7 @@
             <li class="relative px-6 py-3">
               <button
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                @click="togglePemasukanMenu"
+                @click="togglePagesnMenu"
                 aria-haspopup="true"
               >
                 <span class="inline-flex items-center">
@@ -105,7 +105,7 @@
                   ></path>
                 </svg>
               </button>
-              <template x-if="isPemasukanMenuOpen">
+              <template x-if="isPagesMenuOpen">
                 <ul
                   x-transition:enter="transition-all ease-in-out duration-300"
                   x-transition:enter-start="opacity-25 max-h-0"
@@ -117,12 +117,16 @@
                   aria-label="submenu"
                 >
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                    <a class="w-full" href="tab_pemasukan.html">Tabel Pemasukan</a>
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                  >
+                    <a class="w-full" href="tab_pemasukan.html">Tabel Pemasukan </a>
                   </li>
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                    <a class="w-full" href="tambah_pemasukan.html">Tambah Pemasukan</a>
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                  >
+                    <a class="w-full" href="tambah_pemasukan.html">
+                      Tambah Pemasukan
+                    </a>
                   </li>
                 </ul>
               </template>
