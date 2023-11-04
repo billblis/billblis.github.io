@@ -135,7 +135,7 @@ module.exports = {
         '800': '#42389d',
         '900': '#362f78',
       },
-      purple: {
+      red: {
         '50': '#f6f5ff',
         '100': '#edebfe',
         '200': '#dcd7fe',
