@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="shortcut icon" type="image/png" href="assets/img/billblis.png" />
+    <link rel="shortcut icon" type="image/png" href="../assets/img/billblis.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/tailwind.output.css" />
+    <link rel="stylesheet" href="../assets/css/tailwind.output.css" />
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
-    <script src="assets/js/init-alpine.js"></script>
-    <script src="js/cookie.js"></script>
+    <script src="../assets/js/init-alpine.js"></script>
+    <script src="../assets/js/cookie.js"></script>
   </head>
   <body>
     <div class="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
@@ -27,13 +27,13 @@
             <img
               aria-hidden="true"
               class="object-cover w-full h-full dark:hidden"
-              src="assets/img/bank.jpg"
+              src="../assets/img/bank.jpg"
               alt=""
             />
             <img
               aria-hidden="true"
               class="hidden object-cover w-full h-full dark:block"
-              src="assets/img/bank.jpg"
+              src="../assets/img/bank.jpg"
               alt=""
             />
           </div>
@@ -47,14 +47,14 @@
               <label class="block text-sm">
                 <span class="text-gray-700 dark:text-gray-400">Username</span>
                 <input
-                  class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                  type="text" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                   placeholder="username" id="username" value="renjun" required
                 />
               </label>
               <label class="block mt-4 text-sm">
                 <span class="text-gray-700 dark:text-gray-400">Password</span>
                 <input
-                  class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                  type="password" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                   placeholder="***************"
                   type="password" id="password" value="yellow" required
                 />
@@ -118,7 +118,7 @@
       </div>
     </div>
 
-    <script type="module" src="assets/js/post.js"></script>
+    <script type="module" src="../assets/js/post.js"></script>
     <script type="module">
       // Nama cookie yang akan diperiksa
   
@@ -129,7 +129,7 @@
       // Periksa apakah cookie ada dengan menggunakan fungsi dari file cookieUtil.js
       if (getCookie(cookieName)) {
         // Jika cookie tidak ada, arahkan kembali ke halaman login
-        window.location.href = "dashboard.html";
+        window.location.href = "../dashboard.html";
       }
     </script>
     <!-- Sign In End -->
