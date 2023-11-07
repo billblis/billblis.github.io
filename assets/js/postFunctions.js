@@ -15,18 +15,18 @@ export default function PostSignUp() {
 }
 
 
-function responseData(result) {
+// function responseData(result) {
 
-    // setInner("pesan", result.message);
-    if (result.message == "Selamat Datang") {
-        setCookieWithExpireHour("token", result.token, 2);
-        alert("Berhasil Masuk " + result.message)
-        window.location.href = "../dashboard.html";
-    } else {
-        alert("Gagal Masuk " + "password atau username salah")
-        console.log(result.message);
-    }
-}
+//     // setInner("pesan", result.message);
+//     if (result.message == "Selamat Datang") {
+//         setCookieWithExpireHour("token", result.token, 2);
+//         alert("Berhasil Masuk " + result.message)
+//         window.location.href = "../dashboard.html";
+//     } else {
+//         alert("Gagal Masuk " + "password atau username salah")
+//         console.log(result.message);
+//     }
+// }
 
 function cekLogin() {
     var username = document.getElementById("username").value;
