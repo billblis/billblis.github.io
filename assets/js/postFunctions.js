@@ -28,6 +28,19 @@ function responseData(result) {
     }
 }
 
+function cekLogin() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    // Simpan informasi login di sini (misalnya di database atau variabel sederhana)
+    // Di sini, kita hanya memberikan contoh perbandingan sederhana
+    if (username === "contohuser" && password === "contohpassword") {
+        alert("Login berhasil!");
+    } else {
+        alert("Login gagal. Silakan coba lagi.");
+    }
+}
+
 // function setCookieWithExpireHour(cname, cvalue, exhour) {
 //     const d = new Date();
 //     d.setTime(d.getTime() + (exhour * 60 * 60 * 1000));
