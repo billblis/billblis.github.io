@@ -1,8 +1,6 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { setInner, getValue } from "https://jscroot.github.io/element/croot.js";
 import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
-
-// Tambahkan baris berikut untuk mengimpor SweetAlert2 dari CDN
 import 'https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js';
 import 'https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css';
 
@@ -15,11 +13,12 @@ export default function PostSignUp() {
         "password": getValue("password")
     }
 
-    postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
+    postWithToken(target_url,tokenkey,tokenvalue,datainjson,responseData);
 }
 
+
 function responseData(result) {
-    if (result.message == "Selamat Datang") {
+    if (result.message === "Selamat Datang") {
         setCookieWithExpireHour("token", result.token, 2);
         Swal.fire({
             title: 'Berhasil Masuk',
