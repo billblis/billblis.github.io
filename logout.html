@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/cookie.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,14 +10,10 @@
     <link rel="shortcut icon" type="image/png" href="assets/img/billblis.png" />
 </head>
 <body>
-    <script>
-        deleteCookie("token");
-        
-    </script>
-    <script>
-        function logout() {
-          // Tampilkan SweetAlert
-          Swal.fire({
+
+<script>
+    function logout() {
+        Swal.fire({
             title: 'Logout',
             text: 'Anda yakin ingin logout?',
             icon: 'warning',
@@ -24,15 +21,25 @@
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Ya, logout!'
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-              // Lakukan aksi logout di sini
-              window.location.href = 'login.php'; // Gantilah dengan URL logout Anda
+                // Jika klik "Ya, logout!"
+                deleteCookie("token"); // Menghapus cookie token
+                window.location.href = 'halaman_login.php'; // Ganti dengan URL halaman login Anda
+            } else {
+                // Jika klik "Cancel"
+                window.location.href = 'dashboard.php'; // Ganti dengan URL dashboard Anda
             }
-          });
-        }
-      </script>
-      
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        });
+    }
+
+    // Panggil fungsi logout saat halaman dimuat
+    window.onload = logout;
+</script>
+
+    <script>
+        deleteCookie("token");
+        
+    </script>
 </body>
 </html>
