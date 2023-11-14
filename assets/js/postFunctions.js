@@ -1,8 +1,8 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { setInner, getValue } from "https://jscroot.github.io/element/croot.js";
 import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
-import 'https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js';
-import 'https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css';
+import Swal from './sweetalert2.min.js';
+import '../css/sweetalert2.min.css';
 
 export default function PostSignUp() {
     let target_url = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/Billblis";
