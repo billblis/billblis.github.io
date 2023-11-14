@@ -18,7 +18,7 @@ export default function PostSignUp() {
 
 function responseData(result) {
     if (result.message === "Selamat Datang") {
-        setCookieWithExpireHour("token", result.token, 2);
+        setCookieWithExpireHour("token", result.token, 2, "SameSite=None; Secure");
         Swal.fire({
             title: 'Berhasil Masuk',
             text: 'Selamat datang!',
