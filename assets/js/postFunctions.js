@@ -1,6 +1,7 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { setInner, getValue } from "https://jscroot.github.io/element/croot.js";
 import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
+import Swal from 'sweetalert2';
 
 export default function PostSignUp() {
     let target_url = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/Billblis";
@@ -14,24 +15,27 @@ export default function PostSignUp() {
     postWithToken(target_url,tokenkey,tokenvalue,datainjson,responseData);
 }
 
-
 function responseData(result) {
-
-    // setInner("pesan", result.message);
     if (result.message == "Selamat Datang") {
         setCookieWithExpireHour("token", result.token, 2);
-        alert("Berhasil Masuk " + result.message)
-        window.location.href = "../dashboard.html";
+
+        // Use SweetAlert for success message
+        Swal.fire({
+            icon: 'success',
+            title: 'Berhasil Masuk',
+            text: result.message,
+        }).then(() => {
+            // Redirect to the dashboard page
+            window.location.href = "../dashboard.html";
+        });
     } else {
-        alert("Gagal Masuk " + "password atau username salah")
-        console.log(result.message);
+        // Use SweetAlert for error message
+        Swal.fire({
+            icon: 'error',
+            title: 'Gagal Masuk',
+            text: 'Password atau username salah',
+        }).then(() => {
+            console.log(result.message);
+        });
     }
 }
-
-// function setCookieWithExpireHour(cname, cvalue, exhour) {
-//     const d = new Date();
-//     d.setTime(d.getTime() + (exhour * 60 * 60 * 1000));
-//     let expires = "expires=" + d.toUTCString();
-//     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/" + "secure; HttpOnly; samesite=Strict";
-//     // Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly; SameSite=Strict
-// }
