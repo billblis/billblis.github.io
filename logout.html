@@ -11,30 +11,40 @@
 </head>
 <body>
 
-<script>
-    // Panggil fungsi logout saat halaman dimuat
-    window.onload = function() {
-        // Jika ingin menampilkan alert setelah menghapus cookie
-        Swal.fire({
-            title: 'Logout',
-            text: 'Anda telah berhasil logout.',
-            icon: 'success',
-            showCancelButton: true, // Show cancel button
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Ok',
-            cancelButtonText: 'Cancel',
-            timer: 2000 // Auto close after 2 seconds
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.location.href = 'pages/login.html';
-            } else {
-                // Jika klik "Cancel"
-              window.location.href = 'dashboard.html'; 
-            }
-        });
-    };
-</script>
+    <script>
+        function logout() {
+            Swal.fire({
+                title: 'Logout',
+                text: 'Anda yakin ingin logout?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya, logout!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Jika klik "Ya, logout!"
+                    deleteCookie("token"); // Menghapus cookie token
+    
+                    // Display a logout success message
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Logout Berhasil',
+                        text: 'Anda telah berhasil logout.',
+                    }).then(() => {
+                        window.location.href = 'pages/login.html';
+                    });
+                } else {
+                    // Jika klik "Cancel"
+                    window.location.href = 'dashboard.html'; 
+                }
+            });
+        }
+    
+        // Panggil fungsi logout saat halaman dimuat
+        window.logout = logout;
+    </script>
+    
 
 <script>
     // Hapus cookie token saat halaman dimuat
