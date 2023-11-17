@@ -186,37 +186,39 @@
         <!-- Contact Us  -->
         <div id="contact_us" class="basic-6">
             <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <h2>Contact Us</h2>
-                        <div class="xl:text-left">
-                            <img class="inline" src="assets/img/aplikasi-pengatur-keuangan.jpg" alt="alternative" />
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2>Contact Us</h2>
+                    <form id="contactForm" data-toggle="validator" data-focus="false">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-control-input" id="cname" required>
+                                <label class="label-control" for="cname">Your Name</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="email" class="form-control-input" id="cemail" required>
+                                <label class="label-control" for="cemail">Your Email</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <textarea class="form-control-textarea" id="cmessage" required></textarea>
+                                <label class="label-control" for="cmessage">Your Message</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="form-control-submit-button">Send Message</button>
+                            </div>
                         </div>
-                        <form id="contactForm" data-toggle="validator" data-focus="false">
-                            <div class="row">
-                                <div class="col-md-6 form-group">
-                                    <input type="text" class="form-control-input" id="cname" required>
-                                    <label class="label-control" for="cname">Your Name</label>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <input type="email" class="form-control-input" id="cemail" required>
-                                    <label class="label-control" for="cemail">Your Email</label>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                                    <label class="label-control" for="cmessage">Your Message</label>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                                <div class="col-md-6">
-                                    <button type="submit" class="form-control-submit-button">Send Message</button>
-                                </div>
-                            </div>
-                            <div class="form-message">
-                                <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-                            </div>
-                        </form>
+                        <div class="form-message">
+                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="xl:text-left">
+                        <img class="inline" src="assets/img/aplikasi-pengatur-keuangan.jpg" alt="alternative" />
                     </div>
+                </div>
             </div>
         </div>
         
