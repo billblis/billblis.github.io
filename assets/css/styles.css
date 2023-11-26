@@ -163,7 +163,7 @@ h6 {
 }
 
 .btn-solid-lg.secondary {
-    border: 1px solid #84211b;
+    border: 1px solid #83201b;
     background-color: #84211b;
 }
 
@@ -880,7 +880,7 @@ input[type="checkbox"] {
 .footer {
     padding-top: 6rem;
     padding-bottom: 3rem;
-    background: linear-gradient(rgba(255, 255, 255, 1), rgba(197, 234, 249, 1));
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(132, 33, 27, 0.5));
     text-align: center;
 }
 
@@ -918,7 +918,7 @@ input[type="checkbox"] {
 /*********************/
 .copyright {
     padding-top: 1.5rem;
-    background-color: #c5eaf9;
+    background-color: rgba(193, 144, 141, 1);
     text-align: center;
 }
 
