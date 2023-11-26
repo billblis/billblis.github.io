@@ -21,7 +21,7 @@ Table Of Contents:
 Colors:
 - Backgrounds - light gray #f1f9fc
 - Buttons, icons - purple #594cda
-- Buttons, icons - red #eb427e
+- Buttons, icons - red #84211b
 - Headings text - black #252c38
 - Body text - dark gray #6b747b
 ******************************************/
@@ -163,14 +163,18 @@ h6 {
 }
 
 .btn-solid-lg.secondary {
-    border: 1px solid #eb427e;
-    background-color: #eb427e;
+    border: 1px solid #84211b;
+    background-color: #84211b;
 }
 
 .btn-solid-lg.secondary:hover {
-    border: 1px solid #eb427e;
+    border: 1px solid #84211b;
     background: transparent;
-    color: #eb427e; /* needs to stay here because of the color property of a tag */
+    color: #84211b; /* needs to stay here because of the color property of a tag */
+}
+
+.icolor{
+    color: #c93730;
 }
 
 .btn-outline-reg {
@@ -792,7 +796,7 @@ input[type="checkbox"] {
 
 .cards-2 .card .card-title {
     margin-bottom: 1rem;
-    color: #eb427e;
+    color: #84211b;
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 1.875rem;
@@ -851,7 +855,7 @@ input[type="checkbox"] {
     position: relative;
     width: 13.75rem;
     padding: 0.3125rem 0 0.3125rem 4.125rem;
-    background-color: #eb427e;
+    background-color: #84211b;
     color: #ffffff;
     -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
     -ms-transform: rotate(45deg) translate3d(0, 0, 0);
