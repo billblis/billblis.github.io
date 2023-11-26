@@ -477,7 +477,7 @@ input[type="checkbox"] {
     display: block;
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
-    color: #6b747b;
+    color: #000000;
     text-decoration: none;
     line-height: 0.875rem;
     transition: all 0.2s ease;
@@ -505,7 +505,7 @@ input[type="checkbox"] {
 .dropdown.show > a,
 .nav-link:hover,
 .nav-link.active {
-    color: #ff6e84;
+    color: #800000;
     text-decoration: none;
 }
 
@@ -577,7 +577,8 @@ input[type="checkbox"] {
 /*    Header     */
 /*****************/
 .header {
-    background: linear-gradient(rgba(197, 234, 249, 1), rgba(255, 255, 255, 1));
+    background: linear-gradient( rgba(162, 0, 0, 0.5)
+    ,rgba(255, 255, 255, 1));
 }
 
 /********************/
@@ -587,6 +588,8 @@ input[type="checkbox"] {
     padding-top: 4rem;
     padding-bottom: 1.5rem;
     text-align: center;
+    background: linear-gradient( rgba(255, 255, 255, 1),rgba(162, 0, 0, 0.5)
+    );
 }
 
 .cards-1 .card {
@@ -773,7 +776,9 @@ input[type="checkbox"] {
 .cards-2 {
     position: relative;
     padding-top: 8rem;
-    background: linear-gradient(rgba(50, 60, 70, 0.9), rgba(50, 60, 70, 0.9)), url("../images/pricing-background.jpg") center center no-repeat;
+    background: linear-gradient( rgba(162, 0, 0, 0.5)
+    ,rgba(255, 255, 255, 1))
+    , url("../img/save.jpg") center center no-repeat;
     background-size: cover;
     text-align: center;
 }
@@ -880,7 +885,7 @@ input[type="checkbox"] {
 .footer {
     padding-top: 6rem;
     padding-bottom: 3rem;
-    background: linear-gradient(rgba(255, 255, 255, 1), rgba(132, 33, 27, 0.5));
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(162, 0, 0, 0.5));
     text-align: center;
 }
 
@@ -918,8 +923,11 @@ input[type="checkbox"] {
 /*********************/
 .copyright {
     padding-top: 1.5rem;
-    background-color: rgba(193, 144, 141, 1);
+    background-color: rgba(162, 0, 0, 0.5);
     text-align: center;
+}
+.copy{
+    color: #000000;
 }
 
 /******************************/
@@ -1024,7 +1032,7 @@ a:hover.back-to-top {
     .navbar.top-nav-collapse {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
-        background-color: #f1f9fc;
+        background-color: #ffffff;      
     }
 
     .offcanvas-collapse {
