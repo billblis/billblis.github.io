@@ -17,8 +17,10 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
-    <script src="../assets/js/init-alpine.js"></script>
-    <script src="../assets/js/cookie.js"></script>
+    <!-- <script src="../assets/js/init-alpine.js"></script> -->
+    <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/init-alpine.js" type="module"></script>
+    <!-- <script src="../assets/js/cookie.js"></script> -->
+    <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/cookie.js" type="module"></script>
   </head>
   <body>
     <div class="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
@@ -50,8 +52,8 @@
               <label class="block text-sm">
                 <span class="text-gray-700 dark:text-gray-400">Username</span>
                 <input
-                  type="text" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                  placeholder="username" id="username" value="renjun" required
+                  type="username" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                  placeholder="username" autocomplete="username" id="username" value="renjun" required
                 />
               </label>
               <label class="block mt-4 text-sm">
@@ -59,7 +61,7 @@
                 <input
                   type="password" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                   placeholder="***************"
-                  type="password" id="password" value="yellow" required
+                  type="password" autocomplete="current-password" id="password" value="yellow" required
                 />
               </label>
 
@@ -121,7 +123,10 @@
       </div>
     </div>
 
-    <script type="module" src="../assets/js/post.js"></script>
+    <!-- <script type="module" src="../assets/js/post.js"></script> -->
+     <!-- <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/post.js" type="module"></script> -->
+     <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/login.js" type="module"></script>
+     
     <script type="module">
       // Nama cookie yang akan diperiksa
   
