@@ -10,10 +10,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/tailwind.output.css" />
+    <link href="assets/css/progres.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
       defer
@@ -22,9 +25,12 @@
     src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
     defer
   ></script>
-  <script src="assets/js/init-alpine.js"></script>
-  <script src="assets/js/charts-bars.js" defer></script>
-  <script src="assets/js/charts-lines.js" defer></script>
+  <!-- <script src="assets/js/init-alpine.js"></script> -->
+  <script src=" https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/init-alpine.js"></script>
+  <!-- <script src="assets/js/charts-bars.js" defer></script>
+  <script src="assets/js/charts-lines.js" defer></script> -->
+  <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/charts-bars.js" type="module"></script>
+  <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/charts-lines.js" type="module"></script>
   <body>
     <div
       class="flex h-screen bg-gray-50 dark:bg-gray-900"
@@ -970,36 +976,7 @@
                             </svg>
                           </button>
                         </a>
-                        <button  id="deleteButton"
-                          class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                          aria-label="Delete"
-                        >
-                          <svg
-                            class="w-5 h-5" 
-                            aria-hidden="true"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path fill-rule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                        <script>
-                          document.getElementById("deleteButton").addEventListener("click", function() {
-                          // Tampilkan konfirmasi
-                          var isConfirmed = confirm("Apakah Anda yakin ingin menghapus data?");
-  
-                          // Jika dikonfirmasi, hapus data
-                          if (isConfirmed) {
-                          // Tambahkan kode penghapusan data di sini
-                          // Misalnya, Anda dapat menambahkan AJAX request untuk menghapus data dari server
-                          alert("Data berhasil dihapus!");
-                            }
-                          });
-                        </script>
-                          <!-- <button
+                          <button
                             class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                             aria-label="Delete"
                           >
@@ -1015,7 +992,7 @@
                                 clip-rule="evenodd"
                               ></path>
                             </svg>
-                          </button> -->
+                          </button>
                         </div>
                       </td>
                     </tr>
@@ -1224,6 +1201,45 @@
                 </span>
               </div>
             </div>
+
+        <!-- progress bar berwarna -->    
+        <div class="w-full">
+          <h4 class="my-6 text-lg font-semibold text-gray-600 dark:text-gray-300">
+            Sumber Pemasukan
+          </h4>
+        
+          <div class="shadow w-full bg-grey-light mt-6">
+            <div class="bg-blue text-xs leading-none py-1 text-center text-white width-45 progress-bar">45% - Gaji</div>
+          </div>
+          
+          <div class="shadow w-full bg-grey-light mt-6">
+            <div class="bg-teal text-xs leading-none py-1 text-center text-white width-55 progress-bar">55% - Freelance</div>
+          </div>
+          
+          <div class="shadow w-full bg-grey-light mt-6">
+            <div class="bg-orange text-xs leading-none py-1 text-center text-white width-65 progress-bar">65% - Investasi</div>
+          </div>
+          
+          <div class="shadow w-full bg-grey-light mt-6">
+            <div class="bg-red text-xs leading-none py-1 text-center text-white width-75 progress-bar">75% - Orangtua</div>
+          </div>
+        
+          <div class="shadow w-full bg-grey-light mt-6">
+            <div class="bg-green text-xs leading-none py-1 text-center text-white width-80 progress-bar">80% - Bonus</div>
+          </div>
+          
+          <div class="shadow w-full bg-grey-light mt-6">
+            <div class="bg-purple text-xs leading-none py-1 text-center text-white width-30 progress-bar">30% - Bisnis</div>
+          </div>
+          
+          <div class="shadow w-full bg-grey-light mt-6">
+            <div class="bg-yellow text-xs leading-none py-1 text-center text-white width-90 progress-bar">90% - Pensiun</div>
+          </div>
+          
+          <div class="shadow w-full bg-grey-light mt-6">
+            <div class="bg-pink text-xs leading-none py-1 text-center text-white width-50 progress-bar">50% - Lainnya</div>
+          </div>
+        </div>
 
              <!-- Charts -->
              <div class="grid gap-6 mb-8 md:grid-cols-2">
