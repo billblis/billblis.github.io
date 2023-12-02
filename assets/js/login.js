@@ -12,10 +12,10 @@ export default function PostSignIn() {
     }
 
     // postWithToken(target_url,tokenkey,tokenvalue,datainjson,responseData);
-    postWithToken(target_url, token, datainjson, responseFunction);
+    postWithToken(target_url, token, datainjson, responseData);
 }
 
-function responseFunction(result) {
+function responseData(result) {
     if (result.message == "Selamat Datang") {
         setCookieWithExpireHour("token", result.token, 2);
 
@@ -40,5 +40,5 @@ function responseFunction(result) {
     }
 }
 
-document.getElementById("button").addEventListener("click", PostSignIn);
+document.getElementById("submit").addEventListener("click", PostSignIn);
 // window.PostSignIn = PostSignIn;
