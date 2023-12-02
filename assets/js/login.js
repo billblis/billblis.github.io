@@ -12,10 +12,10 @@ export default function PostSignIn() {
     }
 
     // postWithToken(target_url,tokenkey,tokenvalue,datainjson,responseData);
-    postWithToken(target_url, token, datainjson, responseData);
+    postWithToken(target_url, token, datainjson, responseFunction);
 }
 
-function responseData(result) {
+function responseFunction(result) {
     if (result.message == "Selamat Datang") {
         setCookieWithExpireHour("token", result.token, 2);
 
