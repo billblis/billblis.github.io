@@ -13,7 +13,6 @@ export default function PostSignIn() {
 
     // postWithToken(target_url,tokenkey,tokenvalue,datainjson,responseData);
     postWithToken(target_url,datainjson,responseData);
-    // postWithToken(target_url,'Authorization', 'Bearer' + tokenkey, datainjson,responseData);
 }
 
 function responseData(result) {
