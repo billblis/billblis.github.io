@@ -40,5 +40,5 @@ function responseData(result) {
     }
 }
 
-// document.getElementById("button").addEventListener("click", PostSignIn);
-window.PostSignIn = PostSignIn;
+document.getElementById("button").addEventListener("click", PostSignIn);
+// window.PostSignIn = PostSignIn;
