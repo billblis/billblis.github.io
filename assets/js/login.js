@@ -1,4 +1,4 @@
-import { postWithToken } from "https://jscroot.github.io/api/croot.js";
+import { post } from "https://jscroot.github.io/api/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
 
@@ -12,7 +12,7 @@ export default function PostSignIn() {
     }
 
     // postWithToken(target_url,tokenkey,tokenvalue,datainjson,responseData);
-    postWithToken(target_url,datainjson,responseData);
+    post(target_url, datainjson, responseData);
 }
 
 function responseData(result) {
