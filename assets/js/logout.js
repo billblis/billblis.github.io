@@ -1,4 +1,4 @@
-import { deleteCookie } from "https://jscroot.github.io/cookie/croot.js";
+import { deleteCookie } from "../js/utilities/api.js";
 
 function logout() {
     var result = confirm("Anda yakin ingin logout?");
