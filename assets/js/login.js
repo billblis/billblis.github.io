@@ -17,16 +17,16 @@ export default function PostSignIn() {
 
 function responseData(result) {
     if (result.token) {
-        setCookieWithExpireHour("Authorization", result.token, 2);
+        setCookieWithExpireHour("token", result.token, 2);
 
         // Use SweetAlert for success message
         Swal.fire({
             icon: 'success',
             title: 'Berhasil Masuk',
-            text: "Selamat Datang",
+            text: "Selamat Datang di Billblis",
         }).then(() => {
             // Redirect to the dashboard page
-            window.location.href = "dashboard.html";
+            window.location.href = "../dashboard.html";
         });
     } else {
         // Use SweetAlert for error message
