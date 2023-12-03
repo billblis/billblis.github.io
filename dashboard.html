@@ -28,7 +28,7 @@
     <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/charts-bars.js" type="module"></script>
     <!-- <script src="assets/js/charts-pie.js" defer></script> -->
     <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/charts-pie.js" type="module"></script>
-    <script src="assets/js/deleteCookie.js"></script>
+    <script type="module" src="assets/js/deleteCookie.js"></script>
     <!-- <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/deleteCookie.js" type="module"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <body>
@@ -266,12 +266,12 @@
             </li>
           </ul>
           <div class="px-6 my-6">
-            <button onclick="logout()"
+            <a onclick="logout()"
               class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
             >
               Logout
               <span class="ml-2" aria-hidden="true">+</span>
-            </button>
+          </a>
           </div>
         </div>
       </aside>
@@ -1042,7 +1042,7 @@
           window.location.href = "pages/login.html";
         }
       </script> -->
-      <script src="assets/js/cekCookie.js"></script>
+      <script type="module" src="assets/js/cekCookie.js"></script>
 
 
 
