@@ -16,17 +16,17 @@ export default function PostSignIn() {
 }
 
 function responseData(result) {
-    if (result.message == "Selamat Datang") {
+    if (result.token) {
         setCookieWithExpireHour("Authorization", result.token, 2);
 
         // Use SweetAlert for success message
         Swal.fire({
             icon: 'success',
             title: 'Berhasil Masuk',
-            text: result.message,
+            text: "Selamat Datang",
         }).then(() => {
             // Redirect to the dashboard page
-            window.location.href = "../dashboard.html";
+            window.location.href = "dashboard.html";
         });
     } else {
         // Use SweetAlert for error message
