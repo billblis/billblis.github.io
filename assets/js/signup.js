@@ -17,7 +17,7 @@ function responseData (result) {
     console.log(result);
     if (result.status === true) {
         alert(`Berhasil Masuk ${result.message}`);
-        window.location.href = "login.html";
+        window.location.href = "./login.html";
     } else {
         alert(`Gagal Signup, ` + result.message );
     }
