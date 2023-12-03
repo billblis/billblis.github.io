@@ -1,4 +1,4 @@
-import { deleteCookie as deleteCookieUtil} from "../js/utilities/cookie.js";
+import { deleteCookie} from "https://jscroot.github.io/cookie/croot.js";
 
 function logout() {
     var result = confirm("Anda yakin ingin logout?");
@@ -9,5 +9,4 @@ function logout() {
     }
 }
 
-window.logout = logout;
-// document.getElementById("button").addEventListener("click", logout);
+document.getElementById("button").addEventListener("click", logout);
