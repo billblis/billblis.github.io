@@ -33,7 +33,7 @@ function responseData(result) {
         Swal.fire({
             icon: 'error',
             title: 'Gagal Masuk',
-            text: 'Password atau username salah',
+            text: result.message,
         }).then(() => {
             console.log(result.message);
         });
