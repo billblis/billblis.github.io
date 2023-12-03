@@ -1,4 +1,4 @@
-import deleteCookie from "./utilities/cookie.js";
+import {deleteCookie as deleteCookieUtil} from "./utilities/cookie.js";
 
 const logout = () => {
     Swal.fire({
@@ -12,11 +12,11 @@ const logout = () => {
     }).then((result) => {
         if (result.isConfirmed) {
             // Jika klik "Ya, logout!"
-            deleteCookie("token"); // Menghapus cookie token
-            window.location.href = "./login.html";
+            deleteCookieUtil("token"); // Menghapus cookie token
+            window.location.href = './login.html';
         } else {
             // Jika klik "Cancel"
-            window.location.href = " ../dashboard.html"; 
+            window.location.href = '../dashboard.html'; 
         }
     });
 }
