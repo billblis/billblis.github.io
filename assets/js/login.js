@@ -1,4 +1,4 @@
-import { post } from "https://jscroot.github.io/api/croot.js";
+import { post } from "../js/utilities/api.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
 
