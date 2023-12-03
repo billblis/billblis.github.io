@@ -1,16 +1,16 @@
-import { postWithToken} from "https://jscroot.github.io/api/croot.js";
+import { post} from "../js/utilities/api.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 
 function PostSignUp  () {
     let target_url = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/signup";
-    let token = "token";
+    // let token = "token";
     let datainjson = {
         email: getValue("email"),
         username: getValue("username"),
         password: getValue("password"),
     };
     console.log(datainjson);
-    postWithToken(target_url, token, datainjson, responseData);
+    post(target_url, datainjson, responseData);
 };
 
 function responseData (result) {
