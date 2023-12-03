@@ -1,4 +1,4 @@
-import { deleteCookie } from "../js/utilities/api.js";
+import { deleteCookie as deleteCookieUtil} from "../js/utilities/cookie.js";
 
 function logout() {
     var result = confirm("Anda yakin ingin logout?");
@@ -9,4 +9,5 @@ function logout() {
     }
 }
 
-document.getElementById("button").addEventListener("click", logout);
+window.logout = logout;
+// document.getElementById("button").addEventListener("click", logout);
