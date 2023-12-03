@@ -12,7 +12,7 @@ export default function PostSignIn() {
     }
 
     // postWithToken(target_url,tokenkey,tokenvalue,datainjson,responseData);
-    post(target_url, token, datainjson, responseData);
+    post(target_url, datainjson, responseData);
 }
 
 function responseData(result) {
@@ -40,5 +40,5 @@ function responseData(result) {
     }
 }
 
-document.getElementById("button").addEventListener("click", PostSignIn);
-// window.PostSignIn = PostSignIn;
+// document.getElementById("button").addEventListener("click", PostSignIn);
+window.PostSignIn = PostSignIn;
