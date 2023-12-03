@@ -8,11 +8,11 @@ const cekCookie = () => {
     // Periksa apakah cookie ada dengan menggunakan fungsi dari file cookieUtil.js
     if (getCookie(cookieName)) {
         if (getFileName() === "./login.html" || getFileName() === "create-account.html") {
-            window.location.href = '../dashboard.html';
+            window.location.href = " ../dashboard.html";
         }
     } else {
         if (getFileName() !== "./login.html" && getFileName() !== "create-account.html") {
-            window.location.href = './login.html';
+            window.location.href = "./login.html";
         }
     }
 }

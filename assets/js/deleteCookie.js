@@ -13,10 +13,10 @@ const logout = () => {
         if (result.isConfirmed) {
             // Jika klik "Ya, logout!"
             deleteCookie("token"); // Menghapus cookie token
-            window.location.href = '../pages/login.html';
+            window.location.href = "./login.html";
         } else {
             // Jika klik "Cancel"
-            window.location.href = 'dashboard.html'; 
+            window.location.href = " ../dashboard.html"; 
         }
     });
 }
