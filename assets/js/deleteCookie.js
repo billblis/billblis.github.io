@@ -1,4 +1,4 @@
-import deleteCookie from "./cookie.js";
+import deleteCookie from "./utilities/cookie.js";
 
 const logout = () => {
     Swal.fire({
