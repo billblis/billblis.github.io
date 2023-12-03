@@ -13,13 +13,14 @@ const logout = () => {
         if (result.isConfirmed) {
             // Jika klik "Ya, logout!"
             deleteCookieUtil("token"); // Menghapus cookie token
-            window.location.href = './login.html';
+            window.location.href = 'login.html';
         } else {
             // Jika klik "Cancel"
-            window.location.href = '../dashboard.html'; 
+            window.location.href = 'dashboard.html'; 
         }
     });
 }
 
 // Panggil fungsi logout saat halaman dimuat
-window.logout = logout;
+// window.logout = logout;
+document.getElementById("button").addEventListener("click", logout);

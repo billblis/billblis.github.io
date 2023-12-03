@@ -1,12 +1,24 @@
 import { deleteCookie} from "https://jscroot.github.io/cookie/croot.js";
 
-function logout() {
-    var result = confirm("Anda yakin ingin logout?");
-    if (result) {
-        deleteCookie("token");
-        // Mengarahkan ke halaman login
-        window.location.href = "login.html";
-    }
+const logout = () => {
+    Swal.fire({
+        title: 'Logout',
+        text: 'Anda yakin ingin logout?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, logout!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Jika klik "Ya, logout!"
+            deleteCookie("token"); // Menghapus cookie token
+            window.location.href = "login.html";
+        } else {
+            // Jika klik "Cancel"
+            window.location.href = "dashboard.html"; 
+        }
+    });
 }
 
 document.getElementById("button").addEventListener("click", logout);

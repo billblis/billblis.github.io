@@ -1,3 +1,3 @@
-import PostSignUp from "./postFunctions.js";
+// import PostSignUp from "./postFunctions.js";
 
-window.PostSignUp = PostSignUp;
+// window.PostSignUp = PostSignUp;
