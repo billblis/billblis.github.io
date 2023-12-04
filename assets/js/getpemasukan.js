@@ -34,13 +34,12 @@ const responseData = (result) => {
     if (result.status === true) {
 
         addInner("tanggal_masuk", result.data[0].tanggal_masuk)
-        addInner("jumlah_masuk", result.data[0].jumlah_masuk)
+        addInner("jrupiah", result.data[0].rupiah)
         addInner("sumber", result.data[0].sumber)
         addInner("deskripsi", result.data[0].deskripsi)
-        addInner("source", result.data[0].source.source)
 
         document.getElementById("tanggal_masuk_Input").value = result.data[0].tanggal_masuk;
-        document.getElementById("jumlah_masuk_Input").value = result.data[0].jumlah_masuk;
+        document.getElementById("rupiahInput").value = result.data[0].jumlah_masuk;
         document.getElementById("sumber_Input").value = result.data[0].jumlah_masuk;
         document.getElementById("deskripsi_Input").value = result.data[0].deskripsi;
         

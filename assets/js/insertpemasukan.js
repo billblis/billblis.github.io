@@ -16,7 +16,7 @@ const PostinsertPemasukan = () => {
     if (getValue("tanggal_masuk_input") === ""|| getValue("tanggal_masuk_input") === null) {
         alert("Tanggal tidak boleh kosong");
         return;
-    }else if (getValue("jumlah_masuk_input") === ""|| getValue("tanggal_masuk_input") === null) {
+    }else if (getValue("rupiahInput") === ""|| getValue("rupiahInput") === null) {
         alert("Jumlah masuk tidak boleh kosong");
         return;
     }else if (getValue("sumber_input") === ""|| getValue("sumber_input") === null) {
