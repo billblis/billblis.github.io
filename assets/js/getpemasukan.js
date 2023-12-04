@@ -1,4 +1,4 @@
-import { postWithBearer } from "./utilities/api.js";
+import { postWithBearer } from "../utilities/api.js";
 import {getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js"
 // import { showLoadingModal, hideLoadingModal } from "./utilities/loading.js"
