@@ -9,7 +9,7 @@ const insertPemasukan = () => {
 
     const data = {
         "tanggal_masuk": getValue("tanggal_masuk"),
-        "jumlah_masuk": parseInt(getValue("jumlah_masuk"), 10),
+        "jumlah_masuk": getValue("jumlah_masuk"),
         "sumber": getValue("sumber"),
         "deskripsi": getValue("deskripsi"),
     }
