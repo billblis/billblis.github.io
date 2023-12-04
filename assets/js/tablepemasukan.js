@@ -2,17 +2,17 @@ export const formPemasukan = `
 class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
 >
 <tr class="text-gray-700 dark:text-gray-400">
-  <td class="px-4 py-3 text-sm">#TANGGAL_MASUK</td>
+  <td class="px-4 py-3 text-sm">#TANGGAL_MASUK#</td>
   <td class="px-4 py-3 text-xs">
    <span
        class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
-     >#JUMLAH_MASUK</span>
+     >#JUMLAH_MASUK#</span>
   </td>
   <td class="px-4 py-3 text-sm">
-   #SUMBER
+   #SUMBER#
  </td>
  <td class="px-4 py-3 text-sm">
-   #DESKRIPSI
+   #DESKRIPSI#
  </td>
   <td class="px-4 py-3">
     <div class="flex items-center space-x-4 text-sm">

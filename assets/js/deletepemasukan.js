@@ -19,7 +19,7 @@ const deletePemasukan= async (IDHAPUS) => {
         myHeaders.append("Authorization", token);
     
         const target_url =
-          "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/deletePemasukan?_id=" + todoID;
+          "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/deletePemasukan?_id=" + pemasukanID;
     
         try {
           const response = await fetch(target_url, {

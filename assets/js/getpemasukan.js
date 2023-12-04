@@ -24,10 +24,10 @@ const target_url = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net
 
 const dataPemasukan  = (value) => {
     const data = formPemasukan
-    .replace("#TANGGAL_MASUK#", value.title)
-    .replace("#JUMLAH_MASUK#", value.description)
-    .replace("#SUMBER#", value.deadline)
-    .replace("#DESKRIPSI#", value._id);
+    .replace("#TANGGAL_MASUK#", value.tanggal_pemasukan)
+    .replace("#JUMLAH_MASUK#", value.jumlah_masuk)
+    .replace("#SUMBER#", value.sumber)
+    .replace("#DESKRIPSI#", value.deskripsi);
 
     addInner("tablePemasukan", data);
 }
