@@ -475,9 +475,7 @@
                 <input 
                     id="jumlah_masuk"
                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                    placeholder="0" 
-                    autocomplete="off"
-                    oninput="formatRupiah(this)"
+                    placeholder="0"
                 />
             </label>
               
@@ -599,29 +597,6 @@
       }  
     </script> -->
 
-
-    <script>
-      function formatRupiah(input) {
-          // Hapus semua karakter selain angka
-          let value = input.value.replace(/\D/g, "");
-      
-          // Validasi input untuk memastikan itu integer
-          if (value !== "" && !Number.isNaN(parseInt(value))) {
-              // Format rupiah dengan tanda titik sebagai pemisah ribuan dan jutaan
-              value = new Intl.NumberFormat("id-ID", {
-                  style: "currency",
-                  currency: "IDR",
-                  minimumFractionDigits: 0,
-              }).format(value);
-          } else {
-              // Atau berikan pesan kesalahan jika input tidak valid
-              value = "Invalid Input";
-          }
-      
-          // Setel nilai input dengan format rupiah atau pesan kesalahan
-          input.value = value;
-      }
-  </script>
 
     <!-- <script>
         function formatRupiah(input) {
