@@ -1,4 +1,4 @@
-import { postWithBearer } from "../utilities/api.js";
+import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js"
 
@@ -14,7 +14,7 @@ const insertPemasukan = () => {
         "deskripsi": getValue("deskripsi"),
     }
 
-    postWithBearer(target_url, tokenkey, tokenvalue, data, responseData)
+    postWithToken(target_url, tokenkey, tokenvalue, data, responseData)
 }
 
 const responseData = (result) => {
