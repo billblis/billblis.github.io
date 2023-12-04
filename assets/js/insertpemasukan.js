@@ -27,21 +27,6 @@ function insertPemasukan(tanggal_masuk, jumlah_masuk, sumber, deskripsi) {
     }
 }
 
-function formatRupiah(input) {
-    // Hapus semua karakter selain angka
-    let value = input.value.replace(/\D/g, "");
-
-    // Format rupiah dengan tanda titik sebagai pemisah ribuan dan jutaan
-    value = new Intl.NumberFormat("id-ID", {
-      style: "currency",
-      currency: "IDR",
-      minimumFractionDigits: 0,
-    }).format(value);
-
-    // Setel nilai input dengan format rupiah
-    input.value = value;
-  }
-
   function tambahData() {
   // Mendapatkan nilai dari input elemen (tanggal, jumlah, sumber, deskripsi)
   const tanggalInput = document.getElementById("tanggalInput");
@@ -86,7 +71,7 @@ function formatRupiah(input) {
 
 // Example usage
 // document.getElementById("submitIncomeButton").addEventListener("click", insertPemasukan);
-document.getElementById("button").addEventListener("click",  function () {
+document.getElementById("submitEventButton").addEventListener("click",  function () {
     const tanggal_masuk = eventDateInput.value; // Assuming eventDateInput is defined
     const jumlah_masuk = parseInt(document.getElementById("jumlahMasuk").value); // Assuming jumlahMasuk is the ID for the input field
     const sumber = document.getElementById("sumber").value; // Assuming sumber is the ID for the input field
