@@ -24,7 +24,7 @@ const responseData = (result) => {
             title: "Insert Successful",
             text: result.message,
         }).then(() => {
-            window.location.href = "list_kegiatan.html";
+            window.location.href = "pemasukan.html";
         });
     } else {
         Swal.fire({
