@@ -27,18 +27,75 @@ function insertPemasukan(tanggal_masuk, jumlah_masuk, sumber, deskripsi) {
     }
 }
 
+function formatRupiah(input) {
+    // Hapus semua karakter selain angka
+    let value = input.value.replace(/\D/g, "");
+
+    // Format rupiah dengan tanda titik sebagai pemisah ribuan dan jutaan
+    value = new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      minimumFractionDigits: 0,
+    }).format(value);
+
+    // Setel nilai input dengan format rupiah
+    input.value = value;
+  }
+
+  function tambahData() {
+  // Mendapatkan nilai dari input elemen (tanggal, jumlah, sumber, deskripsi)
+  const tanggalInput = document.getElementById("tanggalInput");
+  const rupiahInput = document.getElementById("rupiahInput");
+  const selectSumber = document.getElementById("selectSumber"); // Ganti "sumber" dengan ID yang benar
+  const deskripsiInput = document.getElementById("deskripsiInput"); // Ganti "textarea" dengan ID yang benar
+
+   // Periksa apakah elemen ditemukan sebelum mencoba membaca properti 'value'
+   if (!tanggalInput || !rupiahInput || !selectSumber || !deskripsiInput) {
+   console.error("Salah satu elemen tidak ditemukan.");
+   return;
+  }
+
+  const tanggal = tanggalInput.value;
+  const jumlah = rupiahInput.value;
+  const sumber = selectSumber.value;
+  const deskripsi = deskripsiInput.value;
+
+  // Lakukan validasi (tambahkan validasi sesuai kebutuhan)
+
+  // Lakukan sesuatu dengan data yang telah diperoleh
+  console.log("Tambah Data Pemasukan:");
+  console.log("Tanggal:", tanggal);
+  console.log("Jumlah:", jumlah);
+  console.log("Sumber:", sumber);
+  console.log("Deskripsi:", deskripsi);
+
+  // Reset nilai input setelah data ditambahkan (sesuaikan dengan kebutuhan)
+   tanggalInput.value = "";
+   rupiahInput.value = "";
+   selectSumber.value = "Pilih Sumber";
+   deskripsiInput.value = "";
+  }
+
+  function batalTambahData() {
+  // Reset nilai input jika batal (sesuaikan dengan kebutuhan)
+  document.getElementById("tanggalInput").value = "";
+  document.getElementById("rupiahInput").value = "";
+  document.getElementById("selectSumber").value = "Pilih Sumber";
+  document.getElementById("deskripsiInput").value = "";
+  }  
+
 // Example usage
-document.getElementById("submitIncomeButton").addEventListener("click", insertPemasukan);
-// document.getElementById("submitIncomeButton").addEventListener("click",  function () {
-//     const tanggal_masuk = eventDateInput.value; // Assuming eventDateInput is defined
-//     const jumlah_masuk = parseInt(document.getElementById("jumlahMasuk").value); // Assuming jumlahMasuk is the ID for the input field
-//     const sumber = document.getElementById("sumber").value; // Assuming sumber is the ID for the input field
-//     const deskripsi = document.getElementById("deskripsi").value; // Assuming deskripsi is the ID for the input field
+// document.getElementById("submitIncomeButton").addEventListener("click", insertPemasukan);
+document.getElementById("button").addEventListener("click",  function () {
+    const tanggal_masuk = eventDateInput.value; // Assuming eventDateInput is defined
+    const jumlah_masuk = parseInt(document.getElementById("jumlahMasuk").value); // Assuming jumlahMasuk is the ID for the input field
+    const sumber = document.getElementById("sumber").value; // Assuming sumber is the ID for the input field
+    const deskripsi = document.getElementById("deskripsi").value; // Assuming deskripsi is the ID for the input field
 
-//     const insertedID =  insertPemasukan(tanggal_masuk, jumlah_masuk, sumber, deskripsi);
+    const insertedID =  insertPemasukan(tanggal_masuk, jumlah_masuk, sumber, deskripsi);
 
-//     if (insertedID !== null) {
-//         // Do something with the inserted ID if needed
-//         console.log("Inserted ID:", insertedID);
-//     }
-// });
+    if (insertedID !== null) {
+        // Do something with the inserted ID if needed
+        console.log("Inserted ID:", insertedID);
+    }
+});

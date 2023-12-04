@@ -17,12 +17,12 @@ function getAllPemasukan() {
 }
 
 // Example usage
-document.getElementById("getAllPemasukanButton").addEventListener("click", getAllPemasukan);
-// document.getElementById("getAllPemasukanButton").addEventListener("click",  function () {
-//     const allPemasukan = getAllPemasukan();
+// document.getElementById("getAllPemasukanButton").addEventListener("click", getAllPemasukan);
+document.getElementById("button").addEventListener("click",  function () {
+    const allPemasukan = getAllPemasukan();
 
-//     if (allPemasukan !== null) {
-//         // Do something with the retrieved income data if needed
-//         console.log("All Pemasukan:", allPemasukan);
-//     }
-// });
+    if (allPemasukan !== null) {
+        // Do something with the retrieved income data if needed
+        console.log("All Pemasukan:", allPemasukan);
+    }
+});
