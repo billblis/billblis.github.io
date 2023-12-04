@@ -1,4 +1,4 @@
-import { postWithBearer } from "../utilities/api.js";
+import { postWithBearer } from "../js/utilities/api.js";
 import {getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js"
 // import { showLoadingModal, hideLoadingModal } from "./utilities/loading.js"
@@ -34,7 +34,7 @@ const responseData = (result) => {
     if (result.status === true) {
 
         addInner("tanggal_masuk", result.data[0].tanggal_masuk)
-        addInner("jrupiah", result.data[0].rupiah)
+        addInner("rupiah", result.data[0].rupiah)
         addInner("sumber", result.data[0].sumber)
         addInner("deskripsi", result.data[0].deskripsi)
 
