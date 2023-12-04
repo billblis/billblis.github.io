@@ -123,12 +123,12 @@
             </li>
           </ul>
           <div class="px-6 my-6">
-            <button
-              class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-            >
-              Logout
-              <span class="ml-2" aria-hidden="true">+</span>
-            </button>
+            <button onclick="logout()"
+            class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+          >
+            Logout
+            <span class="ml-2" aria-hidden="true">+</span>
+          </button>
           </div>
         </div>
       </aside>
@@ -464,7 +464,7 @@
             <label class="block text-sm">
                 <span class="text-gray-700 dark:text-gray-400">Tanggal</span>
                 <input
-                  type="date" 
+                  type="date" id=""
                   class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                   placeholder="YYYY-MM-DD"
                 />
@@ -500,7 +500,7 @@
               </label>
 
               <label class="block mt-4 text-sm">
-                <span class="text-gray-700 dark:text-gray-400">Deskripsi</span>
+                <span type="deskripsiHelp" class="text-gray-700 dark:text-gray-400">Deskripsi</span>
                 <textarea
                   class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-textarea focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
                   rows="3"
@@ -511,12 +511,14 @@
 
               <!-- Tombol Tambahan dan Batal -->
               <div class="flex justify-end mt-4">
-                <button id="button" type="button"
+                <button id="buttonTambah" type="button"
                   class="mr-4 px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-purple"
                   id="btnInsert">Tambah
                 </button>
-                <button id="button" type="button"
-                  class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red">Batal
+                <button id="buttonBatal" type="button"
+                  class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
+                  onclick="batalTambahData()">Batal
+>>>>>>> 143d57c5533c665f12b1354bc1399998bf307e94
                 </button>
               </div>
             </div>
@@ -524,6 +526,67 @@
         </main>
       </div>
     </div>
+      </div>
+    </div>
+
+    <!-- <script>
+      function formatRupiah(input) {
+        // Hapus semua karakter selain angka
+        let value = input.value.replace(/\D/g, "");
+    
+        // Format rupiah dengan tanda titik sebagai pemisah ribuan dan jutaan
+        value = new Intl.NumberFormat("id-ID", {
+          style: "currency",
+          currency: "IDR",
+          minimumFractionDigits: 0,
+        }).format(value);
+    
+        // Setel nilai input dengan format rupiah
+        input.value = value;
+      }
+
+      function tambahData() {
+      // Mendapatkan nilai dari input elemen (tanggal, jumlah, sumber, deskripsi)
+      const tanggalInput = document.getElementById("tanggalInput");
+      const rupiahInput = document.getElementById("rupiahInput");
+      const selectSumber = document.getElementById("selectSumber"); // Ganti "sumber" dengan ID yang benar
+      const deskripsiInput = document.getElementById("deskripsiInput"); // Ganti "textarea" dengan ID yang benar
+
+       // Periksa apakah elemen ditemukan sebelum mencoba membaca properti 'value'
+       if (!tanggalInput || !rupiahInput || !selectSumber || !deskripsiInput) {
+       console.error("Salah satu elemen tidak ditemukan.");
+       return;
+      }
+
+      const tanggal = tanggalInput.value;
+      const jumlah = rupiahInput.value;
+      const sumber = selectSumber.value;
+      const deskripsi = deskripsiInput.value;
+
+      // Lakukan validasi (tambahkan validasi sesuai kebutuhan)
+
+      // Lakukan sesuatu dengan data yang telah diperoleh
+      console.log("Tambah Data Pemasukan:");
+      console.log("Tanggal:", tanggal);
+      console.log("Jumlah:", jumlah);
+      console.log("Sumber:", sumber);
+      console.log("Deskripsi:", deskripsi);
+
+      // Reset nilai input setelah data ditambahkan (sesuaikan dengan kebutuhan)
+       tanggalInput.value = "";
+       rupiahInput.value = "";
+       selectSumber.value = "Pilih Sumber";
+       deskripsiInput.value = "";
+      }
+
+      function batalTambahData() {
+      // Reset nilai input jika batal (sesuaikan dengan kebutuhan)
+      document.getElementById("tanggalInput").value = "";
+      document.getElementById("rupiahInput").value = "";
+      document.getElementById("selectSumber").value = "Pilih Sumber";
+      document.getElementById("deskripsiInput").value = "";
+      }  
+    </script> -->
 
     <script>
         function formatRupiah(input) {
@@ -541,7 +604,8 @@
           input.value = value;
         }
         </script>
-    <script type="module" src="assets/js/insertpemasukan.js"></script>
+    <script type="module" src="../assets/js/insertpemasukan.js"></script>
+    <script type="module" src="../assets/js/getpemasukan.js"></script>
 
   </body>
 </html>

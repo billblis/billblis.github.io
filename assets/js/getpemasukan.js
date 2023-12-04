@@ -1,6 +1,6 @@
-import { postWithBearer } from "../utilities/api.js";
 import {getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { addInner } from "https://jscroot.github.io/element/croot.js"
+import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { formPemasukan } from "./tablepemasukan.js";
 // // import { showLoadingModal, hideLoadingModal } from "./utilities/loading.js"
 // // import { tabelTopic } from "./temp/table.js";
 
@@ -23,7 +23,7 @@ function getWithToken(target_url, responseFunction) {
 const target_url = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/getPemasukanFromID";
 
 const dataPemasukan  = (value) => {
-    const data = formTodolist
+    const data = formPemasukan
     .replace("#TANGGAL_MASUK#", value.title)
     .replace("#JUMLAH_MASUK#", value.description)
     .replace("#SUMBER#", value.deadline)
@@ -128,3 +128,32 @@ getWithToken(target_url, responseData);
 // };
 
 // Postdata();
+
+// Function to get all income data
+// function getAllPemasukan() {
+//     try {
+//         const response =  fetch('https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/getAllPemasukan');
+
+//         if (!response.ok) {
+//             throw new Error('Failed to fetch income data');
+//         }
+
+//         const pemasukanData =  response.json();
+//         console.log('All Pemasukan:', pemasukanData);
+//         return pemasukanData;
+//     } catch (error) {
+//         console.error('Error fetching income data:', error);
+//         return null;
+//     }
+// }
+
+// // Example usage
+// // document.getElementById("getAllPemasukanButton").addEventListener("click", getAllPemasukan);
+// document.getElementById("button").addEventListener("click",  function () {
+//     const allPemasukan = getAllPemasukan();
+
+//     if (allPemasukan !== null) {
+//         // Do something with the retrieved income data if needed
+//         console.log("All Pemasukan:", allPemasukan);
+//     }
+// });
