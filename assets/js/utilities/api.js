@@ -42,7 +42,7 @@ export const postWithToken = (target_url, tokenkey, tokenvalue, datajson, respon
 
 export const postWithBearer = (target_url, token, datajson, responseFunction) =>{
     const myHeaders = new Headers();
-    myHeaders.append("Authorization", `Bearer ${token}`);
+    myHeaders.append("token", `Bearer ${token}`);
     myHeaders.append("Content-Type", "application/json");
 
     const raw = JSON.stringify(datajson);

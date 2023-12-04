@@ -2,7 +2,7 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const deletePemasukan= async (IDHAPUS) => {
     const pemasukanID = IDHAPUS;
-    const token = getCookie("Authorization");
+    const token = getCookie("token");
   
     const isConfirmed = await Swal.fire({
       title: "Benarkah anda ingin menghapus data ini?",
@@ -16,7 +16,7 @@ const deletePemasukan= async (IDHAPUS) => {
 
     if (isConfirmed.isConfirmed) {
         const myHeaders = new Headers();
-        myHeaders.append("Authorization", token);
+        myHeaders.append("token", token);
     
         const target_url =
           "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/deletePemasukan?_id=" + pemasukanID;
