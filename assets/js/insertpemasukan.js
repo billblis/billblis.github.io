@@ -1,5 +1,5 @@
 import { postWithBearer } from "../js/utilities/api.js";
-import getCookie from "https://jscroot.github.io/cookie/croot.js";
+import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js"
 
 const PostinsertPemasukan = () => {
