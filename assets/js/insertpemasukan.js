@@ -4,7 +4,7 @@ import { getValue } from "https://jscroot.github.io/element/croot.js"
 
 const insertPemasukan = () => {
     const target_url = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/insertPemasukan"
-    const tokenkey = "token";
+    const tokenkey = "Authorization";
     const tokenvalue = getCookie("token");
 
     const data = {
