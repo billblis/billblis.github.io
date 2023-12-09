@@ -1,6 +1,6 @@
 import {getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js";
-import { formPengeluaran } from "./tablepengeluaran.js";
+import { formPengeluaran } from "./table.js";
 // // import { showLoadingModal, hideLoadingModal } from "./utilities/loading.js"
 // // import { tabelTopic } from "./temp/table.js";
 
