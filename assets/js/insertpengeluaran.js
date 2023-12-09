@@ -8,8 +8,8 @@ const insertPengeluaran = () => {
     const tokenvalue = getCookie("Authorization");
 
     const data = {
-        "tanggal_masuk": getValue("tanggal_masuk"),
-        "jumlah_masuk": parseInt(getValue("jumlah_masuk")),
+        "tanggal_keluar": getValue("tanggal_keluar"),
+        "jumlah_keluar": parseInt(getValue("jumlah_keluar")),
         "sumber": getValue("sumber"),
         "deskripsi": getValue("deskripsi"),
     }
