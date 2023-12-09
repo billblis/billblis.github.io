@@ -16,7 +16,7 @@ function getWithToken(target_url, responseFunction) {
 
     fetch(target_url, requestOptions)
         .then(response => response.text())
-        .then(result => responseFunction(JSON.parse(result)))
+        .then(result => responseFunction(result))
         .catch(error => console.log('error', error));
 }
 
@@ -24,7 +24,7 @@ const target_url = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net
 
 const dataPemasukan  = (value) => {
     const data = formPemasukan
-    .replace("#TANGGAL_MASUK#", value.tanggal_pemasukan)
+    .replace("#TANGGAL_MASUK#", value.tanggal_masuk)
     .replace("#JUMLAH_MASUK#", value.jumlah_masuk)
     .replace("#SUMBER#", value.sumber)
     .replace("#DESKRIPSI#", value.deskripsi);
