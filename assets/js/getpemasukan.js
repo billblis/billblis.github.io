@@ -6,7 +6,7 @@ import { formPemasukan } from "./tablepemasukan.js";
 
 function getWithToken(target_url, responseFunction) {
     const myHeaders = new Headers();
-    myHeaders.append("token", getCookie("token"));
+    myHeaders.append("Authorization", getCookie("Authorization"));
 
     const requestOptions = {
         method: 'GET',
@@ -27,7 +27,9 @@ const dataPemasukan  = (value) => {
     .replace("#TANGGAL_MASUK#", value.tanggal_pemasukan)
     .replace("#JUMLAH_MASUK#", value.jumlah_masuk)
     .replace("#SUMBER#", value.sumber)
-    .replace("#DESKRIPSI#", value.deskripsi);
+    .replace("#DESKRIPSI#", value.deskripsi)
+    .replace("#IDEDIT#", value._id)
+    .replace("#IDHAPUS#", value._id);
 
     addInner("tablePemasukan", data);
 }
