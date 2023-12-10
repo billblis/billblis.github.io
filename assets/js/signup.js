@@ -1,27 +1,49 @@
-import { post} from "../js/utilities/api.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 
-function PostSignUp  () {
-    let target_url = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/signup";
-    // let token = "token";
-    let datainjson = {
-        email: getValue("email"),
-        username: getValue("username"),
-        password: getValue("password"),
+function postRegister(target_url, data, responseFunction) {
+
+    const requestOptions = {
+        method: 'POST',
+        body: JSON.stringify(data),
+        redirect: 'follow'
     };
-    console.log(datainjson);
-    post(target_url, datainjson, responseData);
-};
 
-function responseData (result) {
-    console.log(result);
+    fetch(target_url, requestOptions)
+        .then(response => response.text())
+        .then(result => responseFunction(JSON.parse(result)))
+        .catch(error => console.log('error', error));
+}
+
+const Register = () => {
+    const target_url = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/signup";
+    
+    const data = {
+        "email" : getValue("email"),
+        "username": getValue("username"),
+        "password": getValue("password"),
+    };
+    
+    postRegister(target_url, data, responseData);
+}
+
+const responseData = (result) => {
     if (result.status === true) {
-        alert(`Berhasil Masuk ${result.message}`);
-        window.location.href = "./login.html";
+        Swal.fire({
+            icon: "success",
+            title: "Register Successful",
+            text: result.message,
+        }).then(() => {
+            window.location.href = "login.html";
+        });
     } else {
-        alert(`Gagal Signup, ` + result.message );
+        Swal.fire({
+            icon: "error",
+            title: "Register Failed",
+            text: result.message,
+        });
     }
-};
+}
 
-document.getElementById("button1").addEventListener("click", PostSignUp);
-// window.PostSignUp = PostSignUp;
+const btnRegister = document.getElementById("button1");
+
+btnRegister.addEventListener("click", Register);

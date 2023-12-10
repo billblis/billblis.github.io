@@ -1,18 +1,34 @@
-import { post } from "../js/utilities/api.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
 
-export default function PostSignIn() {
-    let target_url = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/login";
-    // let token = "token";
-    // let tokenvalue = "5f2dcd0e6f39ad4515c8397819a04a22bd6ff03d63b0eaa5913c9e93a217c33b";
-    let datainjson = {
-        username: getValue("username"),
-        password: getValue("password")
-    }
+function postWithToken(target_url, data, responseFunction) {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 
-    // postWithToken(target_url,tokenkey,tokenvalue,datainjson,responseData);
-    post(target_url, datainjson, responseData);
+    const requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: JSON.stringify(data),
+        redirect: 'follow'
+    };
+
+    fetch(target_url, requestOptions)
+        .then(response => response.text())
+        .then(result => responseFunction(JSON.parse(result)))
+        .catch(error => console.log('error', error));
+}
+
+const Login = () => {
+
+    const target_url = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/login";
+    
+    const data = {
+        "username": getValue("username"),
+        "password": getValue("password"),
+    };
+
+    postWithToken(target_url, data, responseData);
+
 }
 
 function responseData(result) {
@@ -38,5 +54,4 @@ function responseData(result) {
     }
 }
 
-document.getElementById("button").addEventListener("click", PostSignIn);
-// window.PostSignIn = PostSignIn;
+document.getElementById("button").addEventListener("click", Login);
