@@ -127,12 +127,15 @@
               </li>
           </ul>
           <div class="px-6 my-6">
-            <button onclick="logout()"
-            class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-          >
-            Logout
-            <span class="ml-2" aria-hidden="true">+</span>
-          </button>
+            <a href="pages/login.html" onclick="logout()" class="block w-full">
+                <button
+                  class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                >
+                  Logout
+                  <span class="ml-2" aria-hidden="true">-></span>
+                </button>
+              </a>
+              
           </div>
           
         </div>
@@ -257,12 +260,15 @@
               </li>
           </ul>
           <div class="px-6 my-6">
-            <button
-              class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-            >
-              Create account
-              <span class="ml-2" aria-hidden="true">+</span>
-            </button>
+            <a href="pages/login.html" onclick="logout()" class="block w-full">
+                <button
+                  class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                >
+                  Logout
+                  <span class="ml-2" aria-hidden="true">-></span>
+                </button>
+              </a>
+              
           </div>
         </div>
       </aside>
@@ -644,6 +650,7 @@
 
 
              <!-- Charts -->
+            </div>
             <div class="grid gap-6 mb-8 md:grid-cols-2">
               <!-- Bars chart -->
               <div
@@ -699,7 +706,6 @@
               </div>
             </div>
            </div>
-         </div>
         </main>
        
   </body>
