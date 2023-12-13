@@ -128,8 +128,8 @@
             </li>
           </ul>
           <div class="px-6 my-6">
-            <a href="pages/login.html" onclick="logout()" class="block w-full">
-                <button
+            <a  class="block w-full">
+                <button type="button" id="btnLogout"
                   class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
                 >
                   Logout
@@ -260,8 +260,8 @@
             </li>
           </ul>
           <div class="px-6 my-6">
-            <a href="pages/login.html" onclick="logout()" class="block w-full">
-                <button
+            <a  class="block w-full">
+                <button type="button" id="btnLogout"
                   class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
                 >
                   Logout
@@ -432,26 +432,25 @@
                       </a>
                     </li> -->
                     <li class="flex">
-                      <a
-                        class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                        href="pages/login.html" onclick="logout()"
+                      <button type="button" id="btnLogout"
+                      class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200" 
+                    >
+                      <svg
+                        class="w-4 h-4 mr-3"
+                        aria-hidden="true"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
                       >
-                        <svg
-                          class="w-4 h-4 mr-3"
-                          aria-hidden="true"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
-                          ></path>
-                        </svg>
-                        <span>Logout</span>
-                      </a>
+                        <path
+                          d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                        ></path>
+                      </svg>
+                      <span>Logout</span>
+                    </button>
                     </li>
                   </ul>
                 </template>
@@ -806,6 +805,7 @@
     <script type="module" src="assets/js/getPengeluaran.js"></script>
     <script type="module" src="assets/js/deletePengeluaran.js"></script>
     <script type="module" src="assets/js/auth.js"></script>
+    <script type="module" src="../assets/js/auth.js"></script>
   </body>
 
 </html>
