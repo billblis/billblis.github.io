@@ -26,14 +26,14 @@ const Register = () => {
     postRegister(target_url, data, responseData);
 }
 
-const responseData = (result) => {
+function responseData (result) {
     if (result.status === true) {
         Swal.fire({
             icon: "success",
             title: "Register Successful",
             text: result.message,
         }).then(() => {
-            window.location.href = "login.html";
+            window.location.href = "../pages/login.html";
         });
     } else {
         Swal.fire({
@@ -44,6 +44,4 @@ const responseData = (result) => {
     }
 }
 
-const btnRegister = document.getElementById("button1");
-
-btnRegister.addEventListener("click", Register);
+document.getElementById("button1").addEventListener("click", Register);
