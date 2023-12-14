@@ -6,6 +6,8 @@ const logout = () => {
       title: "Konfirmasi",
       text: "Apakah Anda benar ingin logout?",
       showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
       confirmButtonText: "Benar",
       cancelButtonText: "Tidak",
     }).then((result) => {
