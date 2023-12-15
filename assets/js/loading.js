@@ -1,26 +1,32 @@
+// new-loading.js
+
 document.addEventListener("DOMContentLoaded", function () {
-    var loaderWrapper = document.createElement("div");
-    loaderWrapper.id = "loader-wrapper";
-    loaderWrapper.innerHTML = `
-        <div id="loader"></div>
-        <div id="loader"></div>
-        <div id="loader"></div>
-        <div id="loader"></div>
-        <div id="loader"></div>    
-    `;
-    
-    document.body.appendChild(loaderWrapper);
-
-    var loaders = document.querySelectorAll("#loader-wrapper #loader");
-
-    setTimeout(function () {
-        loaderWrapper.style.display = 'none';
-    }, 3000);
-
-    // Add bounce and colorChange classes to each loader
-    loaders.forEach(function (loader, index) {
-        loader.classList.add("bounce");
-        loader.classList.add("colorChange");
-        loader.style.animationDelay = 0.1 * index + "s";
-    });
-});
+    // Create a new div for the new loader wrapper
+    const newLoaderWrapper = document.createElement("div");
+    newLoaderWrapper.id = "new-loader-wrapper";
+  
+    // Create a div for the new loader content
+    const newLoaderContent = document.createElement("div");
+    newLoaderContent.id = "new-loader";
+  
+    // Append the new loader content to the new loader wrapper
+    newLoaderWrapper.appendChild(newLoaderContent);
+  
+    // Append the new loader wrapper to the body
+    document.body.appendChild(newLoaderWrapper);
+  
+    // Function to show the new loading animation
+    function showNewLoading() {
+      newLoaderWrapper.style.display = "flex"; // Show the new loader wrapper
+    }
+  
+    // Function to hide the new loading animation
+    function hideNewLoading() {
+      newLoaderWrapper.style.display = "none"; // Hide the new loader wrapper
+    }
+  
+    // Example: Show the new loading animation for 3 seconds (3000 milliseconds)
+    showNewLoading();
+    setTimeout(hideNewLoading, 3000);
+  });
+  
