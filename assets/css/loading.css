@@ -1,28 +1,126 @@
-/* new-loading.css */
+/* awesome-loading.css */
 
-#new-loader-wrapper {
+
+.awesome-loader-wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 999;
+  background: rgba(255, 255, 255, 1); /* Full white background */
 }
 
-#new-loader {
-  width: 40px;
-  height: 40px;
-  border: 4px solid rgba(0, 0, 0, 0.1);
+/* .awesome-loader-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+} */
+
+.awesome-loader {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.awesome-loader div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: rgb(255, 0, 0);
   border-radius: 50%;
-  border-top: 4px solid rgb(255, 0, 0);
-  animation: spin 1s linear infinite;
+  animation: awesome-spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.awesome-loader div:nth-child(1) {
+  animation-delay: 0s;
+  top: 0;
+  left: 0;
+}
+
+.awesome-loader div:nth-child(2) {
+  animation-delay: -0.1s;
+  top: 0;
+  left: 20px;
+}
+
+.awesome-loader div:nth-child(3) {
+  animation-delay: -0.2s;
+  top: 0;
+  left: 40px;
+}
+
+.awesome-loader div:nth-child(4) {
+  animation-delay: -0.3s;
+  top: 0;
+  left: 60px;
+}
+
+.awesome-loader div:nth-child(5) {
+  animation-delay: -0.4s;
+  top: 20px;
+  left: 0;
+}
+
+.awesome-loader div:nth-child(6) {
+  animation-delay: -0.5s;
+  top: 20px;
+  left: 20px;
+}
+
+.awesome-loader div:nth-child(7) {
+  animation-delay: -0.6s;
+  top: 20px;
+  left: 40px;
+}
+
+.awesome-loader div:nth-child(8) {
+  animation-delay: -0.7s;
+  top: 20px;
+  left: 60px;
+}
+
+.awesome-loader div:nth-child(9) {
+  animation-delay: -0.8s;
+  top: 40px;
+  left: 0;
+}
+
+.awesome-loader div:nth-child(10) {
+  animation-delay: -0.9s;
+  top: 40px;
+  left: 20px;
+}
+
+.awesome-loader div:nth-child(11) {
+  animation-delay: -1s;
+  top: 40px;
+  left: 40px;
+}
+
+.awesome-loader div:nth-child(12) {
+  animation-delay: -1.1s;
+  top: 40px;
+  left: 60px;
+}
+
+@keyframes awesome-spin {
+  0%, 100% {
+      transform: scale(0.8);
+  }
+  50% {
+      transform: scale(1.2);
+  }
 }
