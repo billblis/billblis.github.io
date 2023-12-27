@@ -1,6 +1,7 @@
-import {getCookie } from "https://jscroot.github.io/cookie/croot.js";
+import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { formPemasukan } from "./table.js";
+
 
 function getWithToken(target_url, responseFunction) {
     const myHeaders = new Headers();
@@ -36,10 +37,29 @@ const dataPemasukan  = (value) => {
 
 const responseData = (result) => {
     if (result.status === true) {
+
+        // Iterate through the data and add rows to the table
         result.data.forEach(dataPemasukan);
 
         console.log(result);
     }
 }
 
+const rCardPemasukan = (result) => {
+    if (result.status === true) {
+        // Calculate the total sum of jumlah_masuk
+        const totalPemasukan = result.data.reduce((sum, item) => sum + item.jumlah_masuk, 0);
+
+        // Update the HTML element with the calculated sum
+        document.getElementById('incomeCounter').innerText = `Rp. ${totalPemasukan}`;
+
+        // // Iterate through the data and add rows to the table
+        result.data.forEach(dataPemasukan);
+
+        console.log(result);
+    }
+}
+
+
 getWithToken(target_url, responseData);
+getWithToken(target_url, rCardPemasukan);
