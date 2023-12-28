@@ -643,7 +643,7 @@
             </h4>
              <div class="w-full overflow-hidden rounded-lg shadow-xs">
               <div class="w-full overflow-x-auto">
-                <table class="w-full whitespace-no-wrap">
+                <table id="transaksiTable"   class="w-full whitespace-no-wrap">
                   <thead>
                     <tr
                       class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
@@ -657,11 +657,11 @@
                   <tbody
                     class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
                   >
-                    <tr class="text-gray-700 dark:text-gray-400">
+                    <!-- <tr class="text-gray-700 dark:text-gray-400">
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
                          
-                          <div>
+                          <div id="p">
                             <p class="font-semibold">Pemasukan</p>
                             <p class="text-xs text-gray-600 dark:text-gray-400">
                               Bisnis
@@ -904,7 +904,7 @@
                           </button>
                         </div>
                       </td>
-                    </tr>
+                    </tr> -->
                   </tbody>
                 </table>
               </div>
@@ -1017,6 +1017,63 @@
     </button>
     </a>
     </div>
+    <script>
+      // Data transaksi (contoh)
+      const transaksiData = [
+         { kategori: "Pemasukan", tanggal: "22-02-2023", jumlah: "Rp 200.000,00" },
+         // Tambahkan data transaksi lainnya
+      ];
+   
+      // Fungsi untuk membangun baris tabel
+      function buildTableRow(transaksi) {
+         return `
+            <tr class="text-gray-700 dark:text-gray-400">
+               <td class="px-4 py-3">
+                  <div class="flex items-center text-sm">
+                     <div>
+                        <p class="font-semibold">${transaksi.kategori}</p>
+                        <p class="text-xs text-gray-600 dark:text-gray-400">
+                           ${transaksi.detail}
+                        </p>
+                     </div>
+                  </div>
+               </td>
+               <td class="px-4 py-3 text-sm">
+                  ${transaksi.tanggal}
+               </td>
+               <td class="px-4 py-3 text-xs">
+                  <span class="px-2 py-1 font-semibold leading-tight ${
+                     transaksi.kategori === "Pemasukan" ? "text-green-700 bg-green-100" : "text-red-700 bg-red-100"
+                  } rounded-full dark:${transaksi.kategori === "Pemasukan" ? "bg-green-700 text-green-100" : "bg-red-700 text-red-100"}">
+                     ${transaksi.jumlah}
+                  </span>
+               </td>
+               <td class="px-4 py-3">
+                  <!-- Tombol Edit dan Delete -->
+               </td>
+            </tr>
+         `;
+      }
+   
+      // Fungsi untuk membangun tabel
+      function buildTable() {
+         const tableBody = document.getElementById("transaksiTable").getElementsByTagName("tbody")[0];
+   
+         // Hapus semua baris yang ada (jika ada)
+         tableBody.innerHTML = "";
+   
+         // Iterasi melalui data transaksi dan tambahkan ke tabel
+         transaksiData.forEach((transaksi) => {
+            const row = buildTableRow(transaksi);
+            tableBody.innerHTML += row;
+         });
+      }
+   
+      // Panggil fungsi untuk membangun tabel saat halaman dimuat
+      window.onload = function () {
+         buildTable();
+      };
+   </script>
 
     <script type="module" src="assets/js/logout.js"></script>
     <script type="module" src="assets/js/logout-mobile.js"></script>
