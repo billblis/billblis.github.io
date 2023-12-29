@@ -4,7 +4,7 @@ export const target_url_pemasukan = "https://asia-southeast2-xenon-hawk-402203.c
 
 const pemasukanCount = (count) => {
     const resultCountElement = document.getElementById("pemasukanCount");
-    resultCountElement.innerHTML = `<td class="px-4 py-3 text-sm">${count}</td>`;  
+    resultCountElement.innerHTML = ` <p>${count}</p>`;  
   };
 
   const getPemasukan = (target_url) => {
