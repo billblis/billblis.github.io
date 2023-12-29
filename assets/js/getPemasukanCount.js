@@ -23,7 +23,7 @@ const pemasukanCount = (count) => {
       const jsonData = JSON.parse(result);
 
       const pemasukancount = jsonData.length;
-
+      alert(pemasukanCount)
       pemasukanCount(pemasukancount);
     })
     .catch((error) => console.log("error", error));
