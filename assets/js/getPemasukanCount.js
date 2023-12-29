@@ -10,6 +10,7 @@ const pemasukanCount = (count) => {
   const getPemasukan = (target_url) => {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", getCookie("Authorization"));
+    myHeaders.append("Content-Type", "application/json");
     const requestOptions = {
       method: "GET",
       headers: myHeaders,
