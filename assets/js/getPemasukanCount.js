@@ -22,9 +22,9 @@ const pemasukanCount = (count) => {
     .then((result) => {
       const jsonData = JSON.parse(result);
 
-      const pemasukancount = jsonData.length;
-      console.log(pemasukanCount)
-      pemasukanCount(pemasukancount);
+      const pemasukancount2 = jsonData.length;
+      console.log(pemasukanCount2)
+      pemasukanCount(pemasukancount2);
     })
     .catch((error) => console.log("error", error));
 };
