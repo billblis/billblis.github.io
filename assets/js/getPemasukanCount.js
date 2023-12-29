@@ -22,7 +22,7 @@ const pemasukanCount = (count) => {
     .then((result) => {
       const jsonData = JSON.parse(result);
       console.log(jsonData)
-      const lenghtPemasukanCount = jsonData.length;
+      const lenghtPemasukanCount = jsonData["data"].length;
       console.log(lenghtPemasukanCount)
       pemasukanCount(lenghtPemasukanCount);
     })
