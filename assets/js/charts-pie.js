@@ -36,7 +36,7 @@
 
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const URLGetUser =
+const URLGetPemasukan =
   "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/getAllUser";
 
 const get = (target_url, responseFunction) => {
@@ -72,7 +72,7 @@ const get = (target_url, responseFunction) => {
 
 window.addEventListener("load", () => {
   get(
-    URLGetUser,
+    URLGetPemasukan,
     (pemasukanCount, pengeluaranCount) => {
       buildChart(
         "#hs-donut-chart",
