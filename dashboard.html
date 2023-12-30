@@ -25,7 +25,8 @@
     ></script>
     <!-- <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/charts-bars.js" type="module"></script> -->
     <script type="module" src="assets/js/charts-bars.js"></script>
-    <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/charts-pie.js" type="module"></script>
+    <script type="module" src="assets/js/charts-pie.js"></script>
+    <!-- <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/charts-pie.js" type="module"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <link rel="stylesheet" href="assets/css/loading.css">
@@ -590,8 +591,69 @@
            
             <!-- Charts -->
             <div class="grid gap-6 mb-8 md:grid-cols-2">
-            <!-- Bars chart -->
+
+                 <!-- Section Charts -->
+      <div class="pt-5 grid grid-cols-1 gap-7 lg:grid-cols-5">
+        <!-- Bar Section -->
+        <div
+          class="w-full lg:col-start-1 lg:col-end-4 bg-white p-5 rounded-lg shadow-md"
+        >
+          <div class="flex justify-center sm:justify-end items-center gap-x-3">
+            <div class="inline-flex items-center">
+              <span
+                class="w-2.5 h-2.5 inline-block bg-blue-600 rounded-sm me-2"
+              ></span>
+              <span class="text-[13px] text-gray-600"> Pemasukan </span>
+            </div>
+            <div class="inline-flex items-center">
+              <span
+                class="w-2.5 h-2.5 inline-block bg-gray-300 rounded-sm me-2"
+              ></span>
+              <span class="text-[13px] text-gray-600"> Pengeluaran </span>
+            </div>
+          </div>
+          <!-- End Legend Indicator -->
+
+          <div id="hs-multiple-bar-charts"></div>
+        </div>
+        <!-- End Bar Section -->
+        <!-- Donut Charts -->
+        <div class="lg:col-start-4 lg:col-end-6">
+          <div
+            class="sm:h-[300px] flex flex-col justify-center items-center bg-white p-5 rounded-lg shadow-md"
+          >
+            <h1 class="text-center text-xl font-semibold text-gray-900 pb-5">
+              Jumlah Transaksi
+            </h1>
+            <div id="hs-donut-chart"></div>
+
+            <!-- Legend Indicator -->
             <div
+              class="flex justify-center sm:justify-end items-center gap-x-4 mt-3 sm:mt-6"
+            >
+              <div class="inline-flex items-center">
+                <span
+                  style="background-color: #001f3f"
+                  class="w-2.5 h-2.5 inline-block rounded-sm me-2"
+                ></span>
+                <span class="text-[13px] text-gray-600"> Pemasukan </span>
+              </div>
+              <div class="inline-flex items-center">
+                <span
+                  style="background-color: #0050a1"
+                  class="w-2.5 h-2.5 inline-block rounded-sm me-2"
+                ></span>
+                <span class="text-[13px] text-gray-600"> Pengeluaran </span>
+              </div>
+            <!-- End Legend Indicator -->
+          </div>
+        </div>
+        <!-- Donut Charts -->
+      </div>
+      <!-- End Section Charts -->
+
+            <!-- Bars chart -->
+            <!-- <div
                 class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
               >
                 <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
@@ -600,9 +662,9 @@
                 <canvas id="bars"></canvas>
                 <div
                   class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400"
-                >
+                > -->
                   <!-- Chart legend -->
-                  <div class="flex items-center">
+                  <!-- <div class="flex items-center">
                     <span
                       class="inline-block w-3 h-3 mr-1 bg-teal-500 rounded-full"
                     ></span>
@@ -615,10 +677,10 @@
                     <span>Pengeluaran</span>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
                 <!-- Doughnut chart -->
-            <div
+            <!-- <div
             class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
           >
             <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
@@ -627,9 +689,9 @@
             <canvas id="pie"></canvas>
             <div
               class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400"
-            >
+            > -->
               <!-- Chart legend -->
-              <div class="flex items-center">
+              <!-- <div class="flex items-center">
                 <span
                   class="inline-block w-3 h-3 mr-1 bg-blue-600 rounded-full"
                 ></span>
@@ -643,7 +705,7 @@
               </div>
             </div>
           </div>
-            </div>
+            </div> -->
 
              <!-- New Table -->
              <!-- <h4
