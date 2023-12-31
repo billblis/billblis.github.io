@@ -45,9 +45,8 @@ const get = (target_url, responseFunction) => {
 };
 
 window.addEventListener("load", () => {
-  get(
-    target_url_pengeluaran, target_url_pemasukan,
-    ( pemasukanCount, pengeluaranCount) => {
+  get(target_url_pemasukan, (pemasukanCount) => {
+    get(target_url_pengeluaran, (pengeluaranCount) => {
       buildChart(
         "#hs-donut-chart",
         () => ({
@@ -103,12 +102,9 @@ window.addEventListener("load", () => {
           },
         }
       );
-    }
-  );
+    });
+  });
 });
-
-
-
 
 // /**
 //  * For usage, visit Chart.js docs https://www.chartjs.org/docs/latest/
