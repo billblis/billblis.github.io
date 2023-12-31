@@ -3,7 +3,8 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 const target_url_pemasukan =
   "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/getAllPemasukan";
 
-const target_url_pengeluaran = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/getAllPengeluaran";
+const target_url_pengeluaran =
+  "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/getAllPengeluaran";
 
 const get = (target_url, responseFunction) => {
   const myHeaders = new Headers();
@@ -17,24 +18,30 @@ const get = (target_url, responseFunction) => {
   fetch(target_url, requestOptions)
     .then((response) => response.text())
     .then((result) => {
-      const parsedResult = JSON.parse(result);
+      console.log("Result:", result); // Log the result to check its content
 
-      // Count the number of "Mahasiswa" and "Mitra"
-      const pemasukanCount = parsedResult.filter(
-        (pemasukan) => pemasukan.jumlah_masuk === "pemasukan"
-      ).length;
+      try {
+        const parsedResult = JSON.parse(result);
 
-      const pengeluaranCount = parsedResult.filter(
-        (pengeluaran) => pengeluaran.jumlah_keluar === "pengeluaran"
-      ).length;
+        if (Array.isArray(parsedResult)) {
+          const pemasukanCount = parsedResult.filter(
+            (pemasukan) => pemasukan.jumlah_masuk === "pemasukan"
+          ).length;
 
-      // Call the response function with the filtered data
-      responseFunction(
-        pemasukanCount,
-        pengeluaranCount
-      );
+          const pengeluaranCount = parsedResult.filter(
+            (pengeluaran) => pengeluaran.jumlah_keluar === "pengeluaran"
+          ).length;
+
+          // Call the response function with the filtered data
+          responseFunction(pemasukanCount, pengeluaranCount);
+        } else {
+          console.error("Invalid response format. Expected an array.");
+        }
+      } catch (error) {
+        console.error("Error parsing JSON:", error);
+      }
     })
-    .catch((error) => console.log("error", error));
+    .catch((error) => console.error("Fetch error:", error));
 };
 
 window.addEventListener("load", () => {
