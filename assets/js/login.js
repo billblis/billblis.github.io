@@ -38,7 +38,7 @@ function responseData(result) {
         // Use SweetAlert for success message
         Swal.fire({
             icon: 'success',
-            title: 'Ok Masuk',
+            title: 'Berhasil Masuk',
             text: "Selamat Datang di Billblis",
         }).then(() => {
             // Redirect to the dashboard page
