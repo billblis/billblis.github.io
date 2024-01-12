@@ -302,7 +302,7 @@
             </button>
             <!-- Search input -->
             <div class="flex justify-center flex-1 lg:mr-32">
-              <div
+              <!-- <div
                 class="relative w-full max-w-xl mr-6 focus-within:text-purple-500"
               >
                 <div class="absolute inset-y-0 flex items-center pl-2">
@@ -325,7 +325,7 @@
                   placeholder="Search for projects"
                   aria-label="Search"
                 />
-              </div>
+              </div> -->
             </div>
             <ul class="flex items-center flex-shrink-0 space-x-6">
               <!-- Theme toggler -->
@@ -463,13 +463,22 @@
           </div>
         </header>
         <main class="h-full overflow-y-auto">
-          <div class="container px-6 mx-auto grid">
+          <di class="container px-6 mx-auto grid">
             <!-- New Table -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h4
              class=" my-6 text-lg font-semibold text-gray-600 dark:text-gray-300"
            >
              Laporan Keuangan
            </h4>
+           <div class="flex flex-col flex-wrap mb-4 space-y-4 md:flex-row md:items-end md:space-x-4">
+           <a href="">
+           <button class="px-3 py-2 font-medium text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple w-auto">
+            ↓ Download Semua Laporan
+           </button>
+          </a>
+          </div>
+
             <div class="w-full overflow-hidden rounded-lg shadow-xs mb-8">
              <div class="w-full overflow-x-auto">
                <table class="w-full whitespace-no-wrap">
