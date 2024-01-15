@@ -454,6 +454,27 @@
                       </div>
                   </div>
                   
+                  <!-- Your existing HTML code -->
+                  
+                  <!-- Add this template to show the change password card when needed -->
+                  <li class="relative">
+                      <button
+                          x-on:click.prevent="openChangePassword"
+                          class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none"
+                          @click="toggleProfileMenu"
+                          @keydown.escape="closeProfileMenu"
+                          aria-label="Account"
+                          aria-haspopup="true"
+                      >
+                          <img
+                              class="object-cover w-8 h-8 rounded-full"
+                              src="assets/img/user2.png"
+                              alt=""
+                              aria-hidden="true"
+                          />
+                      </button>
+                  </li>
+                  
                   <!-- Your existing JavaScript code -->
                   
                   <!-- Ensure to include the Alpine.js initialization -->
@@ -466,7 +487,7 @@
                           });
                       });
                   </script>
-                </li>
+                  </li>
                     <!-- <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
