@@ -23,10 +23,10 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
       defer
     ></script>
-    <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/charts-bars.js" type="module"></script>
-    <!-- <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/charts-pie.js" type="module"></script> -->
+    <!-- <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/charts-bars.js" type="module"></script> -->
+    <script type="module" src="assets/js/charts-bars.js"></script>
     <script type="module" src="assets/js/charts-pie.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <!-- <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/charts-pie.js" type="module"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <link rel="stylesheet" href="assets/css/loading.css">
@@ -267,7 +267,7 @@
           </ul>
           <div class="px-6 my-6">
             <a href="#"  class="block w-full">
-                <button type="button" id="btnLogout"
+                <button type="button" id="btnLogout2"
                   class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
                 >
                   Logout
@@ -304,7 +304,7 @@
             </button>
             <!-- Search input -->
             <div class="flex justify-center flex-1 lg:mr-32">
-              <div
+              <!-- <div
                 class="relative w-full max-w-xl mr-6 focus-within:text-purple-500"
               >
                 <div class="absolute inset-y-0 flex items-center pl-2">
@@ -327,7 +327,7 @@
                   placeholder="Search for projects"
                   aria-label="Search"
                 />
-              </div>
+              </div> -->
             </div>
             <ul class="flex items-center flex-shrink-0 space-x-6">
               <!-- Theme toggler -->
@@ -493,12 +493,17 @@
                 class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
               >
                 <div
-                  class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500"
+                  class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500"
                 >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <!-- <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                     <path
                       d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
                     ></path>
+                  </svg> -->
+
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M11.074 4 8.442.408A.95.95 0 0 0 7.014.254L2.926 4h8.148ZM9 13v-1a4 4 0 0 1 4-4h6V6a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-2h-6a4 4 0 0 1-4-4Z"/>
+                    <path d="M19 10h-6a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Zm-4.5 3.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM12.62 4h2.78L12.539.41a1.086 1.086 0 1 0-1.7 1.352L12.62 4Z"/>
                   </svg>
                 </div>
                 <div>
@@ -519,7 +524,7 @@
                 class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
               >
                 <div
-                  class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500"
+                  class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500"
                 >
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                     <path
@@ -549,10 +554,15 @@
                 <div
                   class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500"
                 >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <!-- <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                     <path
                       d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
                     ></path>
+                  </svg> -->
+
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 12v5m5-9v9m5-5v5m5-9v9M1 7l5-6 5 6 5-6"/>
+                  </svg>
                   </svg>
                 </div>
                 <div>
@@ -564,7 +574,6 @@
                   <p
                     class="text-lg font-semibold text-gray-700 dark:text-gray-200"
                   >
-                  <!-- <span id="remainingBalance">Rp. 0</span> -->
                   <span id="remainingAmount">Rp. 0</span>
                   </p>
                 </div>
@@ -601,6 +610,7 @@
            
             <!-- Charts -->
             <div class="grid gap-6 mb-8 md:grid-cols-2">
+      
             <!-- Bars chart -->
             <div
                 class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
@@ -657,14 +667,14 @@
             </div>
 
              <!-- New Table -->
-             <h4
+             <!-- <h4
               class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300"
             >
               Transaksi
             </h4>
              <div class="w-full overflow-hidden rounded-lg shadow-xs">
               <div class="w-full overflow-x-auto">
-                <table class="w-full whitespace-no-wrap">
+                <table id="transaksiTable"   class="w-full whitespace-no-wrap">
                   <thead>
                     <tr
                       class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
@@ -677,12 +687,12 @@
                   </thead>
                   <tbody
                     class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
-                  >
-                    <tr class="text-gray-700 dark:text-gray-400">
+                  > -->
+                    <!-- <tr class="text-gray-700 dark:text-gray-400">
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
                          
-                          <div>
+                          <div id="p">
                             <p class="font-semibold">Pemasukan</p>
                             <p class="text-xs text-gray-600 dark:text-gray-400">
                               Bisnis
@@ -797,19 +807,6 @@
                             ></path>
                           </svg>
                         </button>
-                        <script>
-                          document.getElementById("deleteButton").addEventListener("click", function() {
-                          // Tampilkan konfirmasi
-                          var isConfirmed = confirm("Apakah Anda yakin ingin menghapus data?");
-  
-                          // Jika dikonfirmasi, hapus data
-                          if (isConfirmed) {
-                          // Tambahkan kode penghapusan data di sini
-                          // Misalnya, Anda dapat menambahkan AJAX request untuk menghapus data dari server
-                          alert("Data berhasil dihapus!");
-                            }
-                          });
-                        </script>
                         </div>
                       </td>
                     </tr>
@@ -938,19 +935,19 @@
                           </button>
                         </div>
                       </td>
-                    </tr>
-                  </tbody>
+                    </tr> -->
+                  <!-- </tbody>
                 </table>
-              </div>
-              <div
+              </div> -->
+              <!-- <div
                 class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
               >
                 <span class="flex items-center col-span-3">
                   Showing 21-30 of 100
                 </span>
-                <span class="col-span-2"></span>
+                <span class="col-span-2"></span> -->
                 <!-- Pagination -->
-                <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
+                <!-- <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
                   <nav aria-label="Table navigation">
                     <ul class="inline-flex items-center">
                       <li>
@@ -1038,7 +1035,7 @@
                   </nav>
                 </span>
               </div>
-            </div>
+            </div> -->
 
         </main>
         </div>
@@ -1051,14 +1048,70 @@
     </button>
     </a>
     </div>
+    <!-- <script>
+      // Data transaksi (contoh)
+      const transaksiData = [
+         { kategori: "Pemasukan", tanggal: "22-02-2023", jumlah: "Rp 200.000,00" },
+         // Tambahkan data transaksi lainnya
+      ];
+   
+      // Fungsi untuk membangun baris tabel
+      function buildTableRow(transaksi) {
+         return `
+            <tr class="text-gray-700 dark:text-gray-400">
+               <td class="px-4 py-3">
+                  <div class="flex items-center text-sm">
+                     <div>
+                        <p class="font-semibold">${transaksi.kategori}</p>
+                        <p class="text-xs text-gray-600 dark:text-gray-400">
+                           ${transaksi.detail}
+                        </p>
+                     </div>
+                  </div>
+               </td>
+               <td class="px-4 py-3 text-sm">
+                  ${transaksi.tanggal}
+               </td>
+               <td class="px-4 py-3 text-xs">
+                  <span class="px-2 py-1 font-semibold leading-tight ${
+                     transaksi.kategori === "Pemasukan" ? "text-green-700 bg-green-100" : "text-red-700 bg-red-100"
+                  } rounded-full dark:${transaksi.kategori === "Pemasukan" ? "bg-green-700 text-green-100" : "bg-red-700 text-red-100"}">
+                     ${transaksi.jumlah}
+                  </span>
+               </td>
+               <td class="px-4 py-3">
+                  Tombol Edit dan Delete -->
+               <!-- </td>
+            </tr>
+         `;
+      } -->
+   
+      <!-- // Fungsi untuk membangun tabel
+      function buildTable() {
+         const tableBody = document.getElementById("transaksiTable").getElementsByTagName("tbody")[0];
+   
+         // Hapus semua baris yang ada (jika ada)
+         tableBody.innerHTML = "";
+   
+         // Iterasi melalui data transaksi dan tambahkan ke tabel
+         transaksiData.forEach((transaksi) => {
+            const row = buildTableRow(transaksi);
+            tableBody.innerHTML += row;
+         });
+      }
+   
+      // Panggil fungsi untuk membangun tabel saat halaman dimuat
+      window.onload = function () {
+         buildTable();
+      };
+   </script> -->
 
     <script type="module" src="assets/js/logout.js"></script>
+    <script type="module" src="assets/js/logout-mobile.js"></script>
     <!-- <script type="module" src="assets/js/getPemasukan.js"></script>
-    <script type="module" src="assets/js/getPengeluaran.js"></script>
-    <script type="module" src="assets/js/getCard.js"></script> -->
+    <script type="module" src="assets/js/getPengeluaran.js"></script> -->
     <script type="module" src="assets/js/auth.js"></script>
-    <script type="module" src="assets/js/sisa_saldo.js"></script>
-    <!-- <script type="module" src="assets/js/charts-pie.js"></script> -->
+    <script type="module" src="assets/js/sisa_uang.js"></script>
       
 <!-- <script>
   function formatRupiah(angka) {
@@ -1101,4 +1154,4 @@
  
   </body>
 
-</html>`
+</html>
