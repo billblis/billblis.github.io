@@ -43,6 +43,13 @@ function data() {
     closeProfileMenu() {
       this.isProfileMenuOpen = false
     },
+    isChangePasswordOpen: false,
+    toggleChangePemasukanMenu() {
+      this.sChangePasswordOpen = !this.sChangePasswordOpen
+    },
+    closeChangePasswordMenu() {
+      this.isChangePaswwordOpen = false
+    },
     isPagesMenuOpen: false,
     togglePagesMenu() {
       this.isPagesMenuOpen = !this.isPagesMenuOpen
