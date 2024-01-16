@@ -44,11 +44,11 @@ function data() {
       this.isProfileMenuOpen = false
     },
     isChangePasswordOpen: false,
-    toggleChangePemasukanMenu() {
-      this.sChangePasswordOpen = !this.sChangePasswordOpen
+    toggleChangePasswordMenu() { 
+      this.isChangePasswordOpen = !this.isChangePasswordOpen; 
     },
-    closeChangePasswordMenu() {
-      this.isChangePaswwordOpen = false
+    closeChangePasswordMenu() { 
+      this.isChangePasswordOpen = false;
     },
     isPagesMenuOpen: false,
     togglePagesMenu() {
