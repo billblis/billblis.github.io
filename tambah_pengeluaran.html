@@ -25,7 +25,7 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/init-alpine.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-    <script type="module" src="assets/js/loading.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/loading.js"></script>
   </head>
   <body>
     <div
@@ -537,12 +537,8 @@
               <!-- Tombol Tambahan dan Batal -->
               <div class="flex justify-end mt-4">
                 <button id="btnInsert" type="button"
-                   class="mr-4 px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-purple">Tambah
-                 <span id="insert-loader" class="hidden ml-2">
-                 <div class="spinner-border text-white" role="status">
-                   <span class="visually-hidden">Loading...</span>
-                 </div>
-                </span>
+                  class="mr-4 px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-purple"
+                  id="btnInsert">Tambah
                 </button>
                 <a href="pengeluaran.html">
                 <button type="button"
@@ -557,11 +553,10 @@
     </div>
 
     <!--SCRIPT-->
-    <script type="module" src="assets/js/insertPengeluaran.js"></script>
-    <script type="module" src="assets/js/auth.js"></script>
-    <script type="module" src="assets/js/logout.js"></script>
-    <script type="module" src="assets/js/logout-mobile.js"></script>
-    <script type="module" src="assets/js/buttonloading.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/insertPengeluaran.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/auth.js"></script>
+    <script type="module" src="https://github.com/billblis/billblis_js/blob/main/logout.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/logout-mobile.js"></script>
 
   </body>
 </html>
