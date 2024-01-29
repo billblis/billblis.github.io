@@ -1,21 +1,50 @@
+// insertPengeluaran.js
+
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { getValue } from "https://jscroot.github.io/element/croot.js"
+import { getValue } from "https://jscroot.github.io/element/croot.js";
+import { fetchData } from './getSisaSaldo.js';
 
-const insertPengeluaran = () => {
-    const target_url = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/insertPengeluaran"
+const insertPengeluaran = async () => {
+    const target_url = "https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/insertPengeluaran";
     const tokenkey = "Authorization";
     const tokenvalue = getCookie("Authorization");
 
-    const data = {
-        "tanggal_keluar": getValue("tanggal_keluar"),
-        "jumlah_keluar": parseInt(getValue("jumlah_keluar")),
-        "sumber": getValue("sumber"),
-        "deskripsi": getValue("deskripsi"),
-    }
+    try {
+        // Fetch data for calculating the remaining balance
+        const pemasukanData = await fetchData("https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/getAllPemasukan");
+        const pengeluaranData = await fetchData("https://asia-southeast2-xenon-hawk-402203.cloudfunctions.net/getAllPengeluaran");
 
-    postWithToken(target_url, tokenkey, tokenvalue, data, responseData)
-}
+        const pemasukan = pemasukanData.reduce((sum, item) => sum + (item.jumlah_masuk || 0), 0);
+        const pengeluaran = pengeluaranData.reduce((sum, item) => sum + (item.jumlah_keluar || 0), 0);
+        const remainingAmount = pemasukan - pengeluaran;
+
+        const jumlahKeluar = parseInt(getValue("jumlah_keluar"));
+
+        // Check if the expense amount exceeds the remaining balance
+        if (jumlahKeluar > remainingAmount) {
+            Swal.fire({
+                icon: "error",
+                title: "Saldo Tidak Cukup",
+                text: "You don't have enough balance for this expense.",
+            });
+            return;
+        }
+
+        const data = {
+            "tanggal_keluar": getValue("tanggal_keluar"),
+            "jumlah_keluar": jumlahKeluar,
+            "sumber": getValue("sumber"),
+            "deskripsi": getValue("deskripsi"),
+        };
+
+        // Continue with the insertion if the balance is sufficient
+        postWithToken(target_url, tokenkey, tokenvalue, data, responseData);
+
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+};
 
 const responseData = (result) => {
     if (result.status === true) {
@@ -33,7 +62,7 @@ const responseData = (result) => {
             text: result.message,
         });
     }
-}
+};
 
 const btnInsert = document.getElementById("btnInsert");
 

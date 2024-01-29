@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create account</title>
+
+    <!--LINK-->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
@@ -11,11 +13,13 @@
     />
     <link rel="stylesheet" href="assets/css/tailwind.output.css" />
     <link rel="stylesheet" href="assets/css/loading.css" />
+
+
+    <!--SCRIPT-->
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
-   <!-- Include SweetAlert library -->
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/init-alpine.js"></script>
@@ -54,11 +58,18 @@
                   type="email" placeholder="Email" autocomplete="email" required
                 />
               </label>
-              <label class="block text-sm">
+              <label class="block mt-4 text-sm">
                 <span class="text-gray-700 dark:text-gray-400">Username</span>
                 <input id="username"
                   class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                   type="username" placeholder="Username" autocomplete="username" required
+                />
+              </label>
+              <label class="block mt-4 text-sm">
+                <span class="text-gray-700 dark:text-gray-400">No Hp</span>
+                <input id="phonenumber"
+                  class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                  type="number" placeholder="62*********" autocomplete="phonenumber" required
                 />
               </label>
               <label class="block mt-4 text-sm">
@@ -69,7 +80,14 @@
                 />
               </label>
 
-              <button type="button" class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple" id="button1">Create Account</button>
+              <button type="button" class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple" id="button1">
+                <span id="button1-text">Create Account</span>
+                <span id="button1-loader" class="hidden ml-2">
+                    <div class="spinner-border text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </span>
+              </button>
 
               <p class="mt-4">
                 <a
@@ -84,7 +102,10 @@
         </div>
       </div>
     </div>
+
+    <!--SCRIPT-->
     <script type="module" src="assets/js/signup.js"></script>
     <script type="module" src="assets/js/loading.js"></script>
+    <script type="module" src="assets/js/btnloadingcreate.js"></script>
   </body>
 </html>

@@ -4,29 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BILLBLIS</title>
+
+    <!--LINK-->
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/tailwind.output.css" />
+    <link rel="stylesheet" href="assets/css/loading.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+  />
+
+    <!--SCRIPT-->
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
     <script src=" https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/init-alpine.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
-    />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
       defer
     ></script>
-    <script  src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/charts-bars.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/gh/billblis/billblis_js@main/charts-lines.js" type="module"></script>
+    <script type="module" src="assets/js/charts-pie.js"></script>
+    <script type="module" src="assets/js/charts-bars.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="assets/css/loading.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
     <script type="module" src="assets/js/loading.js"></script>
   <body>
     <div
@@ -378,7 +384,7 @@
                     aria-hidden="true"
                   />
                 </button>
-                <!-- <template x-if="isProfileMenuOpen">
+                <template x-if="isProfileMenuOpen">
                   <ul
                     x-transition:leave="transition ease-in duration-150"
                     x-transition:leave-start="opacity-100"
@@ -387,9 +393,9 @@
                     @keydown.escape="closeProfileMenu"
                     class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700"
                     aria-label="submenu"
-                  > -->
-                    <!-- <li class="flex">
-                      <a
+                  >
+                    <li class="flex">
+                      <a href="change_pass.html"
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                         href="#"
                       >
@@ -407,10 +413,10 @@
                             d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                           ></path>
                         </svg>
-                        <span>Profile</span>
+                        <span>Change Password</span>
                       </a>
                     </li>
-                    <li class="flex">
+                    <!-- <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                         href="#"
@@ -433,29 +439,29 @@
                         <span>Settings</span>
                       </a>
                     </li> -->
-                    <!-- <li class="flex">
+              <!-- <li class="flex">
                       <button type="button" id="btnLogout"
-                      class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200" 
-                    >
-                      <svg
-                        class="w-4 h-4 mr-3"
-                        aria-hidden="true"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
+                        class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200" 
                       >
-                        <path
-                          d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
-                        ></path>
-                      </svg>
-                      <span>Logout</span>
-                    </button>
-                    </li>
-                  </ul>
-                </template> -->
+                        <svg
+                          class="w-4 h-4 mr-3"
+                          aria-hidden="true"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                          ></path>
+                        </svg>
+                        <span>Logout</span>
+                      </button>
+                    </li> -->
+              </ul>
+                </template>
               </li>
             </ul>
           </div>
@@ -476,11 +482,11 @@
              + Tambah Pengeluaran
            </button>
           </a>
-          <a href="tambah_banyakpengeluaran.html">
+          <!-- <a href="tambah_banyakpengeluaran.html">
             <button class="px-3 py-2 font-medium text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple w-auto">
               + Tambah Banyak Pengeluaran
             </button>
-           </a>
+           </a> -->
            </div>
             <div class="w-full overflow-hidden rounded-lg shadow-xs">
              <div class="w-full overflow-x-auto">
@@ -751,7 +757,7 @@
                 class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mt-8"
               >
                 <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
-                  Bars
+                  Bars Chart
                 </h4>
                 <canvas id="bars"></canvas>
                 <div
@@ -773,14 +779,14 @@
                 </div>
               </div>
 
-              <!-- Lines chart -->
+              <!-- Doughnut/Pie Chart chart -->
             <div
             class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mt-8"
           >
             <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
-              Lines
+              Doughnut/Pie Chart
             </h4>
-            <canvas id="line"></canvas>
+            <canvas id="pie"></canvas>
             <div
               class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400"
             >
@@ -804,7 +810,11 @@
         </div>
       </div>
     </div>
+
+    <!--SCRIPT-->
+    <script type="module" src="assets/js/getPemasukan.js"></script>
     <script type="module" src="assets/js/getPengeluaran.js"></script>
+    <script type="module" src="assets/js/getSisaSaldo.js" defer></script>
     <script type="module" src="assets/js/deletePengeluaran.js"></script>
     <script type="module" src="assets/js/auth.js"></script>
     <script type="module" src="assets/js/logout.js"></script>
